@@ -11,13 +11,17 @@ const App = () => {
 
   const [houses, setHouses] = useState([]);
   const [name, setName] = useState('');
-  const [room, setRoom] = useState([]);
+  const [bedrooms, setBedRooms] = useState('');
+  const [bathrooms, setBathRooms] = useState('');
+  const [squarefootage, setSquareFootage] = useState('');
+  const [price, setPrice] = useState('');
+  const [newname, setNewName] = useState('');
 
   // GET with fetch API // GET HOUSES
   useEffect(() => {
     const fetchHouse = async () => {
       const response = await fetch(
-          'https://ancient-taiga-31359.herokuapp.com/api/houses'
+          'https://62af76fb3bbf46a352228312.mockapi.io/api/houses'
       );
       const data = await response.json();
       console.log(data);
@@ -28,9 +32,9 @@ const App = () => {
 
 
   // Delete with fetchAPI
-  const deleteHouse = async (_id) => {
+  const deleteHouse = async (id) => {
     let response = await fetch(
-      `https://ancient-taiga-31359.herokuapp.com/api/houses/${_id}`,
+      `https://62af76fb3bbf46a352228312.mockapi.io/api/houses/${id}`,
       {
           method: 'DELETE',
       }
@@ -38,7 +42,7 @@ const App = () => {
     if (response.status === 200) {
       setHouses(
           houses.filter((house) => {
-            return house._id !== _id;
+            return house.id !== id;
           })
       );
     } else {
@@ -46,14 +50,52 @@ const App = () => {
     }
   };
 
+
+  //PUT 
+  const updateHouseStats= async (id) => {
+    let response = await fetch(
+      `https://62af76fb3bbf46a352228312.mockapi.io/api/houses/${id}`,
+      {
+        method: 'PUT',
+        
+        body: JSON.stringify({
+          name: newname
+          // bedrooms: 'bedrooms',
+          // bathrooms:
+          // squarefootage:
+          // price: 
+        }),
+
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },  
+      }
+    );
+    
+    const fetchHouse = async () => {
+      const response = await fetch(
+          'https://62af76fb3bbf46a352228312.mockapi.io/api/houses'
+      );
+      const data = await response.json();
+      console.log(data);
+      setHouses(data);
+    };
+    fetchHouse();
+    setNewName('');
+  };
+
+
+
   // Post with fetchAPI
-  const addHouses = async (name, room) => {
-    let response = await fetch('https://ancient-taiga-31359.herokuapp.com/api/houses', {
+  const addHouses = async (name, bedrooms, bathrooms, squarefootage, price) => {
+    let response = await fetch('https://62af76fb3bbf46a352228312.mockapi.io/api/houses', {
       method: 'POST',
       body: JSON.stringify({
           name: name,
-          room: room,
-          // userId: Math.random().toString(36).slice(2),
+          bedrooms: bedrooms,
+          bathrooms: bathrooms,
+          squarefootage: squarefootage,
+          price: price,
       }),
       headers: {
           'Content-type': 'application/json; charset=UTF-8',
@@ -62,14 +104,21 @@ const App = () => {
     let data = await response.json();
     setHouses((houses) => [data, ...houses]);
     setName('');
-    setRoom('');
+    setBedRooms('');
+    setBathRooms('');
+    setSquareFootage('');
+    setPrice('');
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addHouses(name, room);
+    addHouses(name, bedrooms, bathrooms, squarefootage, price);
   };
  
+  const updateName = (value) => {
+    setNewName(value)
+  }
+
  return (
     <Container>
     <br></br>
@@ -78,12 +127,21 @@ const App = () => {
     <div className="add-post-container">
       <br />
       <form onSubmit={handleSubmit}>
-          <input type="text" className="form-control" value={name}
+          <input type="text" required className="form-control" value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <textarea name="" className="form-control" id="" cols="25" rows="10" 
-            value={room} onChange={(e) => setRoom([e.target.value])} 
-          ></textarea>
+          <input type="text" required className="form-control" value={bedrooms}
+            onChange={(e) => setBedRooms(e.target.value)}
+          />
+          <input type="text" required className="form-control" value={bathrooms}
+            onChange={(e) => setBathRooms(e.target.value)}
+          />
+          <input type="text" required className="form-control" value={squarefootage}
+            onChange={(e) => setSquareFootage(e.target.value)}
+          />
+          <input type="text" required className="form-control" value={price}
+            onChange={(e) => setPrice(e.target.value)}
+          />
           <br /><br />
           <Button className='btn-success' type="submit">Add House</Button>
       </form>
@@ -92,7 +150,7 @@ const App = () => {
           {houses.map((house) => {
               return (
 
-                <Card className="post-card" key={house._id}>
+                <Card className="post-card" key={house.id}>
                     <Card.Header>
                     <br></br>
                     <h2 className="post-title">{house.name}</h2>
@@ -100,22 +158,36 @@ const App = () => {
                     </Card.Header>
                     <br></br>
                     <Card.Body className="post-body">
-                    {house.rooms?.map(room => {
-                      return room.name 
-                    })}
-                    <br></br>
-                    {house.rooms?.map(room => {
-                      return room.area
-                    })}
+                    <div>
+                    {house.bedrooms} Bed
+                    </div>
+                    <div>
+                    {house.bathrooms} Bath
+                    </div>
+                    <div>
+                    {house.squarefootage} Sq Ft
+                    </div>
+                    <div>
+                    ${house.price}
+                    </div>
                     </Card.Body>
                     <Button className='btn-dark btn-sm post-btn' type='button'>
                       <div className="button">
-                        <div className="delete-btn" onClick={() => deleteHouse(house._id)}>
+                        <div className="delete-btn" onClick={() => deleteHouse(house.id)}>
                           Delete
                         </div>
                       </div>    
                     </Button> 
                     <br></br> 
+
+                    <div>
+                      <h1>Update Features</h1>
+                      
+                      <input id="update-name" value={newname} type="text" required className="form-control" 
+                      onChange={(e) => updateName(e.target.value)}
+                      />
+                      <button onClick={() => updateHouseStats(house.id)}>Change</button>
+                    </div>
                 </Card>
 
               );
