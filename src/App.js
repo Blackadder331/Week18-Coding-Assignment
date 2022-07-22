@@ -8,13 +8,10 @@ import Container from 'react-bootstrap/Container';
 import Features from './Components/Features.js'
 
 const App = () => {
-  // const [posts, setPosts] = useState([]);
-  // const [title, setTitle] = useState('');
-  // const [body, setBody] = useState('');
 
   const [houses, setHouses] = useState([]);
   const [name, setName] = useState('');
-  const [room, setRoom] = useState('');
+  const [room, setRoom] = useState([]);
 
   // GET with fetch API // GET HOUSES
   useEffect(() => {
@@ -29,7 +26,6 @@ const App = () => {
     fetchHouse();
   }, []);
 
-  
 
   // Delete with fetchAPI
   const deleteHouse = async (_id) => {
@@ -51,7 +47,7 @@ const App = () => {
   };
 
   // Post with fetchAPI
-  const addHouses = async (name) => {
+  const addHouses = async (name, room) => {
     let response = await fetch('https://ancient-taiga-31359.herokuapp.com/api/houses', {
       method: 'POST',
       body: JSON.stringify({
@@ -71,7 +67,7 @@ const App = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addHouses(name);
+    addHouses(name, room);
   };
  
  return (
@@ -84,9 +80,9 @@ const App = () => {
       <form onSubmit={handleSubmit}>
           <input type="text" className="form-control" value={name}
             onChange={(e) => setName(e.target.value)}
-          /><br /><br />
+          />
           <textarea name="" className="form-control" id="" cols="25" rows="10" 
-            value={room} onChange={(e) => setRoom(e.target.value)} 
+            value={room} onChange={(e) => setRoom([e.target.value])} 
           ></textarea>
           <br /><br />
           <Button className='btn-success' type="submit">Add House</Button>
@@ -103,10 +99,18 @@ const App = () => {
                     <br></br>
                     </Card.Header>
                     <br></br>
-                    <Card.Body className="post-body">{house.room}</Card.Body>
+                    <Card.Body className="post-body">
+                    {house.rooms?.map(room => {
+                      return room.name 
+                    })}
+                    <br></br>
+                    {house.rooms?.map(room => {
+                      return room.area
+                    })}
+                    </Card.Body>
                     <Button className='btn-dark btn-sm post-btn' type='button'>
                       <div className="button">
-                        <div className="delete-btn " onClick={() => deleteHouse(house._id)}>
+                        <div className="delete-btn" onClick={() => deleteHouse(house._id)}>
                           Delete
                         </div>
                       </div>    
