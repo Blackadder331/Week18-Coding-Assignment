@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Alert from 'react-bootstrap/Alert';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Features from './Components/Features.js'
+import Nav from './Components/Nav.js';
+import Footer from './Components/Footer.js';
+
+
 
 const App = () => {
 
@@ -120,7 +125,9 @@ const App = () => {
   }
 
  return (
+    <>
     <Container>
+    <Nav />
     <br></br>
     <h1>The House Place</h1>
     <div className="app">
@@ -195,7 +202,11 @@ const App = () => {
         </div>
     </div>
     {/* <Features />  -- removed for now to test houses  */ }
+
+    
     </Container>
+    <Footer />
+    </>
     );
 };
 

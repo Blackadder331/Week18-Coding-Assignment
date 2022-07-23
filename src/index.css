@@ -1,3 +1,86 @@
+/* CUSTOM NAV */
+
+.navbar {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+  background-color: #242C33 !important;
+  border-radius: 0px !important;
+  
+}
+
+.navbar ul {
+  align-items: center !important;
+  justify-content: center !important;
+  height: 85vh;
+  font-size: 30px;
+  line-height: 10vh;
+}
+
+.nav-link.active {
+  text-decoration: underline;
+}
+
+.navbar-toggler {
+  border: none !important;
+  outline: none !important;
+}
+
+.navbar-toggler:focus {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-toggler:focus:not {
+  border: none !important;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none !important;
+}
+
+button:focus:not(:focus-visible) {
+  outline: 0 !important;
+}
+
+button:focus:not {
+  outline: none !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url(../public/images/Hamburger.png) !important;
+}
+
+button[aria-expanded="true"] .navbar-toggler-icon{
+ background-image: url(../public/images/CloseX.png) !important;
+}
+
+.navbar-toggler {
+  padding: 0px !important;
+}
+
+.navbar-toggler * {
+  outline: 0 !important;
+}  
+
+
+.navbar-collapse {
+ height: 100vh !important;
+ /* animation-duration: 50ms !important;
+ animation-delay: 0ms !important; */
+}
+
+.collapsing {
+  height: 100vh !important;
+  /* animation-duration: 50ms !important;
+  animation-delay: 0ms !important; */
+ }
+
+/* GENERAL STYLES */
+
+.app {
+  margin-top: 100px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -24,9 +107,6 @@ form {
   margin: 5px;
 }
 
-.post-card{
-  /* min-width: 300px; */
-}
 
 
 .posts-container {
@@ -93,3 +173,79 @@ form {
   margin-right: 50px;
 
 }
+
+.container-fluid {
+  padding-bottom: 100px;
+}
+
+
+
+
+/* FOOTER STYLES */
+
+footer {
+  background-color: #24272A;
+  padding-top: 6rem;
+  padding-bottom: 28rem;
+  min-height: 65px;
+}
+
+footer p {
+  color: #ffffff;
+}
+
+.footer-arrow {
+  padding-top: 2px;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.float-end a {
+  text-decoration: none !important;
+  color: #ffffff;
+}
+
+.float-end a:hover {
+  text-decoration: none !important;
+  color: #ffffff;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+
+  #nav-custom {
+      padding-left: 2rem;
+      padding-right: 2rem;
+  }
+  .navbar {
+    padding-top: 1.7rem !important;
+    padding-bottom: 1.7rem !important;
+  }
+
+  footer .align-items-center{
+    display: flex;
+    flex-direction: column !important;
+    align-items: start !important;
+  }
+
+  footer .col {
+    padding: 20px
+  }
+
+  footer .float-end {
+    float: left !important;
+  }
+
+  .logo{
+    max-height: 45px !important;
+  }
+
+  footer .logo {
+    margin-bottom: 35px;
+  }
+
+  .footer-arrow {
+    padding-left: 0px;
+  }
+} 
