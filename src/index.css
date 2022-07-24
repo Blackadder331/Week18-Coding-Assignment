@@ -76,6 +76,10 @@ button[aria-expanded="true"] .navbar-toggler-icon{
  }
 
 /* GENERAL STYLES */
+.container{
+    padding-right: 0rem ;;
+   padding-left: 0rem ;
+}
 
 .app {
   margin-top: 100px;
