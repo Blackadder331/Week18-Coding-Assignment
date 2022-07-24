@@ -178,6 +178,18 @@ form {
   padding-bottom: 100px;
 }
 
+/* CUSTOM BULLET MARKER */
+
+
+.card li {
+  background: url(../public/images/bullet-marker.svg) no-repeat 0px 1.4px;
+  margin: 0 2rem 0 -2em;
+  padding-left: 2rem;
+  /* margin-left: -1rem; */
+  margin-top: 10px;
+  display:flex;
+  align-items:center;
+}  
 
 
 
@@ -247,5 +259,9 @@ footer p {
 
   .footer-arrow {
     padding-left: 0px;
+  }
+
+  .posts-container {
+    flex-direction: column;
   }
 } 

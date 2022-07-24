@@ -165,7 +165,7 @@ const App = () => {
                     </Card.Header>
                     <br></br>
                     <Card.Body className="post-body">
-                    <div>
+                    {/* <div>
                     {house.bedrooms} Bed
                     </div>
                     <div>
@@ -176,6 +176,22 @@ const App = () => {
                     </div>
                     <div>
                     ${house.price}
+                    </div> */}
+                    <div>
+                      <ul>
+                          <li>
+                            {house.bedrooms} Bed
+                          </li>
+                          <li>
+                          {house.bathrooms} Bath
+                          </li>
+                          <li>
+                          {house.squarefootage} Sq Ft
+                          </li>
+                          <li>
+                          ${house.price}
+                          </li>
+                        </ul>
                     </div>
                     </Card.Body>
                     <Button className='btn-dark btn-sm post-btn' type='button'>
@@ -187,16 +203,24 @@ const App = () => {
                     </Button> 
                     <br></br> 
 
-                    <div>
-                      <h1>Update Features</h1>
-                      
+                    <Card.Footer>
+                      <div>
+                      <br></br>
+                      <h4>Update Features</h4>
+                      <br></br>
                       <input id="update-name" value={newname} type="text" required className="form-control" 
                       onChange={(e) => updateName(e.target.value)}
                       />
-                      <button onClick={() => updateHouseStats(house.id)}>Change</button>
+                      <br></br> 
+                      <Button className='btn-dark btn-sm' onClick={() => updateHouseStats(house.id)}>Change</Button>
+                      <br></br> 
+                      <br></br> 
                     </div>
-                </Card>
+                    <div>
 
+                    </div>
+                    </Card.Footer>
+                </Card>
               );
           })}
         </div>
