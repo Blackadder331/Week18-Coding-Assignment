@@ -1,19 +1,162 @@
+import { Routes, Route, Outlet, NavLink } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import Alert from 'react-bootstrap/Alert';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
-import Features from './Components/Features.js'
 import Nav from './Components/Nav.js';
 import Footer from './Components/Footer.js';
 
-
-
 const App = () => {
+  return (
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="home" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="projects" element={<Projects/>} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="*" element={<p>There's nothing here: 404!</p>} />
+      </Route>
+    </Routes>
+  );
+};
 
+const Layout = () => {
+  // const style = ({ isActive }) => ({
+  //   fontWeight: isActive ? 'bold' : 'normal',
+  // });
+
+  return (
+    <>
+      <nav className="navbar navbar-expand-xxxl navbar-light fixed-top bg-light">
+        <div className="container" id="nav-custom">
+            <a href="#">
+            <img
+                src="images/ORDEN-logo.svg"
+                className="logo"
+                style={{ maxHeight: 60, height: 60 }}
+                alt="ORDEN INV Logo"
+            />
+            </a>
+            <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            >
+            <span className="navbar-toggler-icon" />
+            </button>
+            <div 
+                  data-toggle="collapse"
+                  data-target="#navbarCollapse"
+            className="collapse navbar-collapse" id="navbarCollapse">
+            <br />
+            <ul className="navbar-nav ms-auto mb-2 mb-md-0">
+                <li className="nav-item">
+                  <NavLink 
+                  data-toggle="collapse"
+                  data-target="#navbarCollapse"
+                  className="nav-link"
+                  activeClassName="active"
+                  to="/home" 
+                  exact 
+                  onClick={'data-bs-target="#navbarCollapse"'}
+                  >
+                    Home
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink 
+                  data-toggle="collapse"
+                  data-target="#navbarCollapse"
+                  className="nav-link"
+                  activeClassName="active"
+                  to="/about" 
+                  onClick={'data-bs-target="#navbarCollapse"'}
+                  >
+                    About
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink 
+                  data-toggle="collapse"
+                  data-target="#navbarCollapse"
+                  className="nav-link"
+                  activeClassName="active"
+                  to="/projects" 
+                  onClick={'data-bs-target="#navbarCollapse"'}
+                  >
+                    Projects
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink 
+                  data-toggle="collapse"
+                  data-target="#navbarCollapse"
+                  className="nav-link"
+                  activeClassName="active"
+                  to="/contact" 
+                  onClick={'data-bs-target="#navbarCollapse"'}>
+                  Contact
+                </NavLink>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+
+
+      <nav>
+        <NavLink to="/home" >
+          Home
+        </NavLink>
+        <NavLink to="/about" >
+          About
+        </NavLink>
+        <NavLink to="/projects" >
+          Projects
+        </NavLink>
+        <NavLink to="/contact" >
+          Contact
+        </NavLink>
+      </nav>
+
+      <main>
+        <Outlet />
+      </main>
+    </>
+  );
+};
+
+const Home = () => {
+  return (
+    <>
+    <Container>
+        <h2 style={{ marginTop: '200px', marginBottom: '100px' }}>Home</h2>
+    </Container>
+    <Footer />
+    </>
+  );
+};
+
+const About = () => {
+  return (
+    <>
+      <Container>
+          <h2 style={{ marginTop: '200px', marginBottom: '100px' }}>About</h2>
+      </Container>
+    <Footer />
+    </>
+  );
+};
+
+const Projects = () => {
   const [houses, setHouses] = useState([]);
   const [name, setName] = useState('');
   const [bedrooms, setBedRooms] = useState('');
@@ -127,7 +270,7 @@ const App = () => {
  return (
     <>
     <Container>
-    <Nav />
+
     <br></br>
     <h1>The House Place</h1>
     <div className="app">
@@ -165,18 +308,6 @@ const App = () => {
                     </Card.Header>
                     <br></br>
                     <Card.Body className="post-body">
-                    {/* <div>
-                    {house.bedrooms} Bed
-                    </div>
-                    <div>
-                    {house.bathrooms} Bath
-                    </div>
-                    <div>
-                    {house.squarefootage} Sq Ft
-                    </div>
-                    <div>
-                    ${house.price}
-                    </div> */}
                     <div>
                       <ul>
                           <li>
@@ -232,6 +363,17 @@ const App = () => {
     <Footer />
     </>
     );
+};
+
+const Contact = () => {
+  return (
+    <>
+      <Container>
+        <h2 style={{ marginTop: '200px', marginBottom: '100px' }}>Contact</h2>
+      </Container>
+      <Footer />
+    </>
+  );
 };
 
 export default App;

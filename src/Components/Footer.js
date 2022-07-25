@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 
 const Footer = () => {
@@ -12,14 +13,24 @@ const Footer = () => {
             <div className="row align-items-center">
                 <div className="col col-6 logo-footer">
                     <div>
-                        <a href="#">
+                        <NavLink 
+                        data-toggle="collapse"
+                        data-target="#navbarCollapse"
+                        className="nav-link"
+                        activeClassName="active"
+                        to="/home" 
+                        exact 
+                        onClick={'data-bs-target="#navbarCollapse"'}
+                        >
+                        {/* <a href=" "> */}
                             <img
                                 src="images/ODREN-logo-reversed.svg"
                                 className="logo"
                                 style={{ height: 60 }}
                                 alt="ORDEN INV Logo"
                             />
-                        </a>
+                        {/* </a> */}
+                        /</NavLink>
                     </div>
                 </div>
                 <div className="col">

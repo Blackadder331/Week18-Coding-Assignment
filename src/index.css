@@ -62,18 +62,11 @@ button[aria-expanded="true"] .navbar-toggler-icon{
   outline: 0 !important;
 }  
 
-
-.navbar-collapse {
- height: 100vh !important;
- /* animation-duration: 50ms !important;
- animation-delay: 0ms !important; */
+.nav-item:hover{
+  text-decoration: underline;
+  color: #24272A;
 }
 
-.collapsing {
-  height: 100vh !important;
-  /* animation-duration: 50ms !important;
-  animation-delay: 0ms !important; */
- }
 
 /* GENERAL STYLES */
 .container{
