@@ -14,7 +14,7 @@ const App = () => {
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="projects" element={<Projects/>} />
         <Route path="contact" element={<Contact />} />
@@ -64,7 +64,7 @@ const Layout = () => {
                   data-target="#navbarCollapse"
                   className="nav-link"
                   activeClassName="active"
-                  to="/home" 
+                  to="/" 
                   exact 
                   onClick={'data-bs-target="#navbarCollapse"'}
                   >
@@ -113,7 +113,7 @@ const Layout = () => {
 
 
       <nav>
-        <NavLink to="/home" >
+        <NavLink to="/" >
           Home
         </NavLink>
         <NavLink to="/about" >

@@ -18,7 +18,7 @@ const Footer = () => {
                         data-target="#navbarCollapse"
                         className="nav-link"
                         activeClassName="active"
-                        to="/home" 
+                        to="/" 
                         exact 
                         onClick={'data-bs-target="#navbarCollapse"'}
                         >
