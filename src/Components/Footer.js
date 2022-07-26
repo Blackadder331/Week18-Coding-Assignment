@@ -37,7 +37,8 @@ const Footer = () => {
                     <p><strong>Address</strong>
                     <br />100 W. Center Street 
                     <br />Suite 300
-                    <br />Fayetteville, Arkansas 72701
+                    <br />Fayetteville, Arkansas 
+                    <br />72701
                     </p>
                 </div>
                 <div className="col">

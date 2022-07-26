@@ -8,6 +8,10 @@ import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Nav from './Components/Nav.js';
 import Footer from './Components/Footer.js';
+import HalfScreenLeadership from './Components/HalfScreenLeadership';
+import HalfScreenProjects from './Components/HalfScreenProjects';
+import ContactForm from './Components/ContactForm';
+
 
 const App = () => {
   return (
@@ -33,7 +37,7 @@ const Layout = () => {
     <>
       <nav className="navbar navbar-expand-xxxl navbar-light fixed-top bg-light">
         <div className="container" id="nav-custom">
-            <a href="#">
+            <a href="/">
             <img
                 src="images/ORDEN-logo.svg"
                 className="logo"
@@ -110,23 +114,6 @@ const Layout = () => {
             </div>
         </div>
         </nav>
-
-
-      <nav>
-        <NavLink to="/" >
-          Home
-        </NavLink>
-        <NavLink to="/about" >
-          About
-        </NavLink>
-        <NavLink to="/projects" >
-          Projects
-        </NavLink>
-        <NavLink to="/contact" >
-          Contact
-        </NavLink>
-      </nav>
-
       <main>
         <Outlet />
       </main>
@@ -139,7 +126,11 @@ const Home = () => {
     <>
     <Container>
         <h2 style={{ marginTop: '200px', marginBottom: '100px' }}>Home</h2>
+        
     </Container>
+    <HalfScreenLeadership />
+
+    <HalfScreenProjects />
     <Footer />
     </>
   );
@@ -369,7 +360,19 @@ const Contact = () => {
   return (
     <>
       <Container>
-        <h2 style={{ marginTop: '200px', marginBottom: '100px' }}>Contact</h2>
+        <div className='row contact-row'>
+          <div className='col'>
+            <h2 style={{ marginTop: '200px' }}>Contact</h2>
+            <br></br>
+            <h3 >Feel free to reach out with a general inquiry or a specific project or investment you’d like to discuss.</h3>
+            <h6 style={{ marginBottom: '60px' }}>Please direct press and media request to ordeninv@gmail.com</h6>
+            <ContactForm />
+          </div>
+          <div className='col hard-hat'>
+            <img src='./images/ORDEN_HardHat.png' />
+          </div>
+        </div>
+        
       </Container>
       <Footer />
     </>

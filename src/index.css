@@ -74,6 +74,7 @@ button[aria-expanded="true"] .navbar-toggler-icon{
    padding-left: 0rem ;
 }
 
+
 .app {
   margin-top: 100px;
 }
@@ -175,6 +176,50 @@ form {
   padding-bottom: 100px;
 }
 
+/* Half Section */
+
+.half-screen-leadership {
+  min-height: 600px;
+  background-color: #DEE0E0;
+  display: flex;
+}
+
+.half-screen-projects {
+  min-height: 600px;
+  background-color: #DEE0E0;
+  display: flex;
+}
+
+.text-col-content-leadership {
+  padding-right: 8vw;
+  padding-left: 120px;
+
+}
+
+.text-col-content-projects {
+  padding-right: 120px;
+  padding-left: 8vw;
+  flex-direction: column-reverse;
+
+}
+
+.image-col {
+  background-color: #DEE0E0;
+
+}
+
+.text-col {
+  display: flex;
+  background-color: #C8CBCC;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-fluid {
+  padding-bottom: 0px;
+}
+
+
 /* CUSTOM BULLET MARKER */
 
 
@@ -189,6 +234,27 @@ form {
 }  
 
 
+/* Contact Form */
+
+.contact-from {
+  justify-content: space-between;
+}
+
+.contact-from-item label {
+  margin-left: 20px !important;
+}
+
+.hard-hat {
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
+  padding-top: 100px;
+}
+
+.hard-hat img {
+  max-width: 600px;
+  padding-left: 50px;
+}
 
 /* FOOTER STYLES */
 
@@ -219,7 +285,34 @@ footer p {
   color: #ffffff;
 }
 
+footer .align-items-center{
+  padding-bottom: 100px;
+}
 
+
+
+/* Large displays */
+@media (min-width: 1400px){
+  .container {
+      max-width: 1600px !important;
+  }
+
+  .text-col-content-leadership {
+    padding-right: 18vw;
+  }
+  
+  .text-col-content-projects {
+    padding-left: 18vw;
+  }
+  .hard-hat img {
+    max-width: 800px;
+    padding-left: 50px;
+  }
+
+}
+
+
+/* Mobile displays */
 @media only screen and (max-width: 600px) {
 
 
@@ -260,5 +353,27 @@ footer p {
 
   .posts-container {
     flex-direction: column;
+  }
+
+  /* .half-screen-projects {
+    flex-direction: column-reverse;
+  } */
+
+  .contact-row {
+    flex-direction: column;
+  }
+
+  .hard-hat {
+    align-items: center;
+    justify-content: center;
+    padding-top: 0px;
+    padding-bottom: 60px;
+    width: 300px;
+  }
+
+  .hard-hat img {
+    width: 330px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 } 
