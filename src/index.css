@@ -1,3 +1,23 @@
+
+/* TYPOGROPHY */
+
+h1 {
+  font-size: 7rem !important;
+  line-height: 1.00 !important;
+}
+
+h2 {
+  font-size: 3.5rem !important;
+  font-weight: 700 !important;
+  line-height: 1.00 !important;
+}
+
+.lead {
+  font-size: 2rem !important;
+  font-weight: 500 !important;
+  line-height: 1.25 !important;
+}
+
 /* CUSTOM NAV */
 
 .navbar {
@@ -65,6 +85,23 @@ button[aria-expanded="true"] .navbar-toggler-icon{
 .nav-item:hover{
   text-decoration: underline;
   color: #24272A;
+}
+
+
+/* Hero */
+.hero {
+  margin-top: 100px;
+}
+
+.hero-bg{
+  background-color: #FF7E33;
+}
+.hero h1, .lead{
+  color: #ffffff;
+}
+
+.brick {
+  mix-blend-mode: multiply;
 }
 
 
@@ -252,7 +289,7 @@ form {
 }
 
 .hard-hat img {
-  max-width: 600px;
+  max-width: 450px;
   padding-left: 50px;
 }
 
@@ -312,6 +349,20 @@ footer .align-items-center{
 }
 
 
+/*Brick medium display */
+@media (min-width: 992px){
+  .brick {
+    float: right !important;
+  }
+
+  .hero .row * {
+    padding-right: 4px;
+    padding-left: 4px;
+  
+  }
+}
+
+
 /* Mobile displays */
 @media only screen and (max-width: 600px) {
 
@@ -355,12 +406,33 @@ footer .align-items-center{
     flex-direction: column;
   }
 
-  /* .half-screen-projects {
-    flex-direction: column-reverse;
-  } */
+  .text-col-content-leadership {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
+    min-height: 33vh;
+    justify-content: center;
+  }
+  
+  .text-col-content-projects {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
+    min-height: 33vh;
+  }
 
   .contact-row {
     flex-direction: column;
+  }
+
+  .half-screen-projects{
+    flex-direction: column-reverse;
+  }
+
+  .half-screen-leadership{
+    flex-direction: column-reverse;
   }
 
   .hard-hat {

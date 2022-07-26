@@ -11,6 +11,7 @@ import Footer from './Components/Footer.js';
 import HalfScreenLeadership from './Components/HalfScreenLeadership';
 import HalfScreenProjects from './Components/HalfScreenProjects';
 import ContactForm from './Components/ContactForm';
+import Hero from './Components/Hero';
 
 
 const App = () => {
@@ -124,7 +125,11 @@ const Layout = () => {
 const Home = () => {
   return (
     <>
+    <div className='hero-bg'>
+    <Hero />
+    </div>
     <Container>
+      
         <h2 style={{ marginTop: '200px', marginBottom: '100px' }}>Home</h2>
         
     </Container>
