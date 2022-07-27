@@ -102,6 +102,11 @@ footer p, footer strong {
     --bs-btn-font-size: 0.75rem !important;
 }
 
+.btn-sm:hover {
+  background-color: #24272ad4 !important;
+  border-color: #24272ad4 !important;
+}
+
 h1 {
   font-size: 8rem !important;
   line-height: 1.00 !important;
@@ -238,6 +243,23 @@ button[aria-expanded="true"] .navbar-toggler-icon{
   padding-left: 0rem ;
 }
 
+.philosophy {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.definition img {
+  max-width: 500px;
+  padding-top: 5vh;
+  padding-bottom: 5vh; 
+}
+
+.definition {
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .app {
   margin-top: 100px;
@@ -496,10 +518,14 @@ footer .align-items-center{
     padding-left: 50px;
   }
 
+  .philosophy-text p {
+    padding-right: 7vw;
+  }
+
 }
 
 
-/*Brick medium display */
+/* Medium display */
 @media (min-width: 992px){
   .brick {
     float: right !important;
@@ -618,5 +644,18 @@ footer .align-items-center{
   .lead {
     font-size: 2rem !important;
     line-height: 1.15 !important;
+  }
+
+  .definition img {
+    max-width: 320px;
+    padding-top: 5vh;
+    padding-bottom: 5vh; 
+  }
+  
+  .definition {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto
   }
 } 

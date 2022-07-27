@@ -131,7 +131,21 @@ const Home = () => {
     </div>
     <Container>
       
-        <h2 style={{ marginTop: '200px', marginBottom: '100px' }}>Home</h2>
+        <div className="container philosophy">
+          <div className="row align-items-start">
+            <div className="col-sm philosophy-text">
+              <h2>Our philosophy</h2>
+              <br></br>
+              <p><strong>Amet, consectetuer adipiscing Lorem eorem ipsum dolor sit amet, laoreet dolore magna aliquam volutpat.</strong> Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim nostrud exerci tation ullamcorper suscipit  nisl ut aliquip ex ea commodo consequat. </p>
+              <br></br>
+              <p>Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim nostrud exerci tation ullamcorper suscipit  nisl ut aliquip ex ea commodo consequat. </p>
+            </div>
+            <div className="col-sm definition flex">
+              <img src='./images/definition.png'/>
+            </div>
+          </div>
+        </div>
+
         
     </Container>
     <HalfScreenLeadership />
