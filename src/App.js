@@ -37,7 +37,7 @@ const Layout = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-xxxl navbar-light fixed-top bg-light">
+      <nav className="navbar navbar-expand-xxxl navbar-light fixed-top bg-white">
         <div className="container" id="nav-custom">
             <a href="/">
             <img
@@ -355,7 +355,7 @@ const Projects = () => {
                     <Card.Footer>
                       <div>
                       <br></br>
-                      <h4>Update Features</h4>
+                      <h5>Update Features</h5>
                       <br></br>
                       <input id="update-name" value={newname} type="text" required className="form-control" 
                       onChange={(e) => updateName(e.target.value)}

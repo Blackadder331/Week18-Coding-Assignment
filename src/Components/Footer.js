@@ -57,7 +57,7 @@ const Footer = () => {
                         <p className="float-end">
                         <a href="#"><img
                                 src="images/footer-arrow.svg"
-                                className="footer-arrow"
+                                className="blink footer-arrow"
                                 style={{ height: 65 }}
                                 alt="Back to top arrow"
                             /><br></br>Back to top</a>
