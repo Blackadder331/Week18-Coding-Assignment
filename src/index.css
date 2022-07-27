@@ -291,7 +291,18 @@ form {
   margin: 5px;
 }
 
+.office-map {
+  max-width: 650px;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  padding-left: 2vw;
+}
 
+.map-holder {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
 
 .posts-container {
   display: flex;
@@ -412,7 +423,17 @@ form {
 .card li {
   background: url(../public/images/bullet-marker.svg) no-repeat 0px 1.4px;
   margin: 0 2rem 0 -2em;
-  padding-left: 2rem;
+  padding-left: 2.5rem;
+  /* margin-left: -1rem; */
+  margin-top: 10px;
+  display:flex;
+  align-items:center;
+}  
+
+.contact-info li {
+  background: url(../public/images/bullet-marker.svg) no-repeat 0px 1.4px;
+  margin: 0 2rem 0 -2em;
+  padding-left: 2.5rem;
   /* margin-left: -1rem; */
   margin-top: 10px;
   display:flex;
@@ -626,7 +647,7 @@ footer .align-items-center{
   }
 
   h1 {
-    font-size: 4rem !important;
+    font-size: 3.75rem !important;
     line-height: 1.00 !important;
   }
   
@@ -647,9 +668,10 @@ footer .align-items-center{
   }
 
   .definition img {
-    max-width: 320px;
+    max-width: 300px;
     padding-top: 5vh;
     padding-bottom: 5vh; 
+    pointer-events: none
   }
   
   .definition {
@@ -658,4 +680,24 @@ footer .align-items-center{
     align-items: center;
     margin: auto
   }
+
+  .contact-container {
+    margin-left: 24px !important;
+    margin-right: 24px !important;
+  }
+
+  .office-map {
+    max-width: 330px;
+    padding-left: 0vw;
+  }
+
+  .map-holder {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
 } 

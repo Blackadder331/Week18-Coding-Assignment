@@ -13,6 +13,7 @@ import HalfScreenProjects from './Components/HalfScreenProjects';
 import ContactForm from './Components/ContactForm';
 import Hero from './Components/Hero';
 import FiftySplit from './Components/FiftySplit';
+import OfficeMap from './Components/OfficeMap';
 
 
 const App = () => {
@@ -71,7 +72,6 @@ const Layout = () => {
                   className="nav-link"
                   activeClassName="active"
                   to="/" 
-                  exact 
                   onClick={'data-bs-target="#navbarCollapse"'}
                   >
                     Home
@@ -141,7 +141,7 @@ const Home = () => {
               <p>Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim nostrud exerci tation ullamcorper suscipit  nisl ut aliquip ex ea commodo consequat. </p>
             </div>
             <div className="col-sm definition flex">
-              <img src='./images/definition.png'/>
+              <img draggable='false' border="0" src='./images/definition.png'/>
             </div>
           </div>
         </div>
@@ -400,7 +400,8 @@ const Projects = () => {
 const Contact = () => {
   return (
     <>
-      <Container>
+      {/* <Container className='contact-container' > */}
+        <div className='contianer contact-container'>
         <div className='row contact-row'>
           <div className='col'>
             <h2 style={{ marginTop: '200px' }}>Contact</h2>
@@ -413,8 +414,41 @@ const Contact = () => {
             <img src='./images/ORDEN_HardHat.png' />
           </div>
         </div>
-        
-      </Container>
+        <div className='row info-map-row'>
+          <div className='col-sm' >
+          <h3>Contact info</h3>
+            <div className='row contact-info-row'>
+            <div className='col-sm contact-info'> 
+              <ul>
+                <li>
+                Rob Sharp<br></br>
+                rob@sharparch.net<br></br>
+                479 442 0229
+                </li>
+                <li>
+                Press inquiries<br></br>
+                ordeninv@gmail.com
+                </li>
+              </ul>
+            </div>
+            <div className='col-sm contact-info'>
+              <ul>
+                <li>
+                100 W. Center Street<br></br>
+                Suite 300<br></br>
+                Fayetteville, Arkansas<br></br>
+                72701
+                </li>
+              </ul>
+            </div>
+            </div>
+          </div>
+          <div className='col-sm map-holder' >
+            <OfficeMap />
+          </div>
+        </div>
+        </div>
+      {/* </Container> */}
       <Footer />
     </>
   );
