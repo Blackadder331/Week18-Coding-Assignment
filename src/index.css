@@ -1,3 +1,35 @@
+/* TEST FIFTY SPLIT */
+
+/* body {
+  padding: 0;
+  margin: 0;
+}
+.Full_width {
+  display: flex;
+  align-items: center;
+  min-height: 400px;
+}
+.Full_width .set, .Full_width .duble_Set {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.duble_Set img {
+  width: 100%;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+} */
+/* END TEST FIFTY SPLIT */
+
+
+
+/* * {
+  border-radius: 2px !important;
+} */
+
 
 /* TYPOGROPHY */
 
@@ -16,6 +48,7 @@ h2 {
   font-size: 2rem !important;
   font-weight: 500 !important;
   line-height: 1.25 !important;
+  margin-left: 7px !important;
 }
 
 /* CUSTOM NAV */
@@ -106,9 +139,9 @@ button[aria-expanded="true"] .navbar-toggler-icon{
 
 
 /* GENERAL STYLES */
-.container{
-    padding-right: 0rem ;;
-   padding-left: 0rem ;
+.container {
+  padding-right: 0rem ;
+  padding-left: 0rem ;
 }
 
 

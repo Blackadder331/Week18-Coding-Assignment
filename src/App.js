@@ -12,6 +12,7 @@ import HalfScreenLeadership from './Components/HalfScreenLeadership';
 import HalfScreenProjects from './Components/HalfScreenProjects';
 import ContactForm from './Components/ContactForm';
 import Hero from './Components/Hero';
+import FiftySplit from './Components/FiftySplit';
 
 
 const App = () => {
@@ -136,6 +137,9 @@ const Home = () => {
     <HalfScreenLeadership />
 
     <HalfScreenProjects />
+
+    {/* <FiftySplit /> */}
+
     <Footer />
     </>
   );
@@ -273,23 +277,41 @@ const Projects = () => {
     <div className="add-post-container">
       <br />
       <form onSubmit={handleSubmit}>
-          <input type="text" required className="form-control" value={name}
+        <div className="add-post-container form-floating mb-3">
+          <input type="text" required className="form-control" placeholder="House name" value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <input type="text" required className="form-control" value={bedrooms}
+          <label for="floatingInput">House name</label>
+        </div>
+
+        <div className="add-post-container form-floating mb-3">  
+          <input type="text" required className="form-control" placeholder="Number of bedrooms"value={bedrooms}
             onChange={(e) => setBedRooms(e.target.value)}
           />
-          <input type="text" required className="form-control" value={bathrooms}
+          <label for="floatingInput">Number of bedrooms</label>
+        </div>
+
+        <div className="add-post-container form-floating mb-3">
+          <input type="text" required className="form-control" placeholder="Number of bathrooms"value={bathrooms}
             onChange={(e) => setBathRooms(e.target.value)}
           />
-          <input type="text" required className="form-control" value={squarefootage}
+          <label for="floatingInput">Number of bathrooms</label>
+        </div>
+
+        <div className="add-post-container form-floating mb-3">
+          <input type="text" required className="form-control" placeholder="Square footage" value={squarefootage}
             onChange={(e) => setSquareFootage(e.target.value)}
           />
-          <input type="text" required className="form-control" value={price}
+          <label for="floatingInput">Square footage</label>
+        </div>
+
+        <div className="add-post-container form-floating mb-3">
+          <input type="text" required className="form-control" placeholder="Rent" value={price}
             onChange={(e) => setPrice(e.target.value)}
           />
-          <br /><br />
-          <Button className='btn-success' type="submit">Add House</Button>
+          <label for="floatingInput">Rent</label>
+        </div>
+        <Button className='btn-success' type="submit">Add House</Button>
       </form>
     </div>
     <div className="posts-container">
