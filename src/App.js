@@ -162,8 +162,11 @@ const Home = () => {
 const About = () => {
   return (
     <>
-      <Container>
+      <Container   
+      >
+        <div className='about-container contianer'>
           <h2 style={{ marginTop: '200px', marginBottom: '100px' }}>About</h2>
+        </div>
       </Container>
     <Footer />
     </>
@@ -283,10 +286,10 @@ const Projects = () => {
 
  return (
     <>
-    <Container>
+    <Container style={{ paddingTop: '100px'  }} >
 
     <br></br>
-    <h1>The House Place</h1>
+    <h1>Projects</h1>
     <div className="app">
     <div className="add-post-container">
       <br />
@@ -400,7 +403,7 @@ const Projects = () => {
 const Contact = () => {
   return (
     <>
-      {/* <Container className='contact-container' > */}
+      <Container>
         <div className='contianer contact-container'>
         <div className='row contact-row'>
           <div className='col'>
@@ -416,7 +419,7 @@ const Contact = () => {
         </div>
         <div className='row info-map-row'>
           <div className='col-sm' >
-          <h3>Contact info</h3>
+          <h3>Contact info</h3><br></br>
             <div className='row contact-info-row'>
             <div className='col-sm contact-info'> 
               <ul>
@@ -442,13 +445,14 @@ const Contact = () => {
               </ul>
             </div>
             </div>
+            <br></br>
           </div>
           <div className='col-sm map-holder' >
             <OfficeMap />
           </div>
         </div>
         </div>
-      {/* </Container> */}
+      </Container>
       <Footer />
     </>
   );

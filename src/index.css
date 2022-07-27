@@ -248,6 +248,7 @@ button[aria-expanded="true"] .navbar-toggler-icon{
   margin-bottom: 100px;
 }
 
+
 .definition img {
   max-width: 500px;
   padding-top: 5vh;
@@ -303,6 +304,11 @@ form {
   align-items: flex-end;
   justify-content: flex-end;
 }
+
+.info-map-row .col-sm {
+  padding-left: 0px;
+}
+
 
 .posts-container {
   display: flex;
@@ -434,7 +440,7 @@ form {
   background: url(../public/images/bullet-marker.svg) no-repeat 0px 1.4px;
   margin: 0 2rem 0 -2em;
   padding-left: 2.5rem;
-  /* margin-left: -1rem; */
+  margin-left: -1rem;
   margin-top: 10px;
   display:flex;
   align-items:center;
@@ -556,6 +562,10 @@ footer .align-items-center{
     padding-right: 4px;
     padding-left: 4px;
   
+  }
+
+  .philosophy-text {
+    padding-left: 0px !important;
   }
 }
 
@@ -682,8 +692,25 @@ footer .align-items-center{
   }
 
   .contact-container {
-    margin-left: 24px !important;
-    margin-right: 24px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+
+  .contact-container .col {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
+  .contact-container .contact-info{ 
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  
+  .contact-container h3 {
+    transform: translate(12x, 0px);
+
   }
 
   .office-map {
@@ -698,6 +725,28 @@ footer .align-items-center{
     justify-content: center;
     padding-left: 0px !important;
     padding-right: 0px !important;
+  }
+
+  .contact-info li {
+    margin: 0 2rem 0 -1em;
+  }  
+
+ .container .app {
+    padding-left: 18px;
+    padding-right: 18px
+  }
+
+  .about-container {
+    padding-left: 18px;
+    padding-right: 18px
+  }
+
+  .philosophy-text {
+    padding-left: 20px !important;
+  }
+
+  .definition {
+    padding-left: 20px !important;
   }
 
 } 
