@@ -14,6 +14,8 @@ import OfficeMap from './Components/OfficeMap';
 import HeroAbout from './Components/HeroAbout';
 import HeroProjects from './Components/HeroProjects';
 import NWAGraph from './Components/NWAGraph';
+import ADU from './Components/ADU';
+import Leadership from './Components/Leadership';
 
 
 const App = () => {
@@ -150,8 +152,9 @@ const Home = () => {
     <div className='why-graph-bg'>
     <div className='container why-nwa-graph-container'>
       <div className='row'>
-        <div className='col why-nwa-col'>
+        <div className='col-lg-6 why-nwa-col'>
           <h2>Why Northwest Arkansas?</h2>
+          <br></br>
           <p>body copy here. NWA is the fastest growing blah blah blah per capita! Income vs real estate property values grow year after year blah blah blah...</p>
           <br></br>
           <ul>
@@ -181,7 +184,7 @@ const Home = () => {
             </li>
           </ul>
         </div>
-        <div className='col graph-col'>
+        <div className='col-lg-6 graph-col'>
           <NWAGraph />
         </div>
       </div>
@@ -218,9 +221,21 @@ const About = () => {
         <HeroAbout />
     </div>
         <Container>
-          <div className='about-container contianer'>
-            <h2 style={{ marginTop: '200px', marginBottom: '100px' }}>About</h2>
+          <div className='container vision-container'>
+            <div className='row'>
+              <div className='col-lg-6 vision-text-col'>
+                <h2>Company vision</h2>
+                <br></br>
+                <h3>Lorem ipsum dolor sit amet, cons ectetuer adipis cing elit, sed diam nonummy nibh euis mod wer.</h3>
+                <br></br>
+                <p>Amet, consectetuer adipiscing Lorem eorem ipsum dolor sit amet, laoreet dolore magna aliquam volutpat. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim nostrud exerci tation ullamcorper suscipit  nisl ut aliquip ex ea commodo consequat.Lit nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Amet, consectetuerlor sit amet, laoreet dolore magna aliquam volutpat.</p>
+              </div>
+              <div className='col-lg-6'>
+                <ADU />
+              </div>
+            </div>
           </div>
+          <Leadership />
         </Container>
     
     <Footer />
@@ -395,27 +410,39 @@ const Projects = () => {
 
                 <Card className="post-card" key={house.id}>
                     <Card.Header>
-                    <br></br>
-                    <h2 className="post-title">{house.name}</h2>
-                    <br></br>
+                    <div className='image-card-bg'>
+                          
+                    </div>
                     </Card.Header>
                     <br></br>
                     <Card.Body className="post-body">
-                    <div>
-                      <ul>
-                          <li>
-                            {house.bedrooms} Bed
-                          </li>
-                          <li>
-                          {house.bathrooms} Bath
-                          </li>
-                          <li>
-                          {house.squarefootage} Sq Ft
-                          </li>
-                          <li>
-                          ${house.price}
-                          </li>
-                        </ul>
+                    <br></br>
+                    <h2 className="post-title">{house.name}</h2>
+                    <br></br>
+                    <div className='row'>
+                      <div className='col'>
+                        <div>
+                          <ul>
+                              <li>
+                                {house.bedrooms} Bed
+                              </li>
+                              <li>
+                              {house.bathrooms} Bath
+                              </li>
+                              <li>
+                              {house.squarefootage} Sq Ft
+                              </li>
+                              <li>
+                              ${house.price}
+                              </li>
+                            </ul>
+                        </div>
+                      </div>
+                      <div className='col'>
+                        <div>
+                          <img src='./images/house-1.png' className='house-elevation'/>
+                        </div>
+                      </div>  
                     </div>
                     </Card.Body>
                     <Button className='btn-dark btn-sm post-btn' type='button'>
@@ -449,8 +476,6 @@ const Projects = () => {
           })}
         </div>
     </div>
-    {/* <Features />  -- removed for now to test houses  */ }
-
     
     </Container>
     <Footer />

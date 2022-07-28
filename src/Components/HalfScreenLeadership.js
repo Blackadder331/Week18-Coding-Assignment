@@ -13,6 +13,7 @@ const HalfScreenLeadership = () => {
                 <div className="text-col-content-leadership">
                     <h2>Leadership and vision</h2>
                     <p>Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet magna.</p>
+                    <br></br>
                     <a href="/about" className="btn btn-primary">
                         Call to action</a>
                 </div>

@@ -5,8 +5,15 @@
 
 input {
   border-radius: 2px !important;
-} 
+}
 
+textarea {
+  border-radius: 2px !important;
+}
+
+.card {
+  border-radius: 2px !important;
+}
 
 /* TYPOGROPHY */
 
@@ -341,6 +348,14 @@ form {
   padding-bottom: 50px;
 }
 
+.vision-container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.vision-text-col p, .vision-text-col h3 {
+  padding-right: 200px;
+}
 
 .posts-container {
   display: flex;
@@ -427,12 +442,12 @@ form {
 
 .text-col-content-leadership {
   padding-right: 8vw;
-  padding-left: 120px;
+  padding-left: 160px;
 
 }
 
 .text-col-content-projects {
-  padding-right: 120px;
+  padding-right: 160px;
   padding-left: 8vw;
   flex-direction: column-reverse;
 
@@ -495,6 +510,25 @@ form {
   max-width: 600px;
 }
 
+.leadership-contianer p {
+  max-width: 500px;
+}
+
+.leadership-contianer h3 {
+  max-width: 550px;
+}
+
+.leadership-contianer {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.house-elevation {
+  float: right;
+  max-width: 200px;
+}
+
+
 /* CUSTOM BULLET MARKER */
 
 
@@ -527,6 +561,30 @@ form {
   margin-top: 10px;
   display:flex;
   align-items:center;
+}
+
+.contact-info-leadership li {
+  background: url(../public/images/bullet-marker.svg) no-repeat 0px 1.4px;
+  margin: 0 2rem 0 -2em;
+  padding-left: 2.5rem;
+  /* margin-left: -1rem; */
+  margin-top: 10px !important;
+  display:flex;
+  align-items:center;
+}
+
+.image-card-bg{
+  background-color: #DEE0E0;
+  background: url(../public/images/interior-1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 25% 40%;
+  min-height: 400px;
+}
+
+.card-header {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 /* Contact Form */
@@ -643,6 +701,28 @@ footer .align-items-center{
   .hero-projects {
     min-height: 650px;
   }
+
+  .nwa-graph {
+    max-width: 500px;
+    padding-top: 7vh;
+  }
+  .card {
+    margin-bottom: 175px;
+    /* min-width: 300px;
+    max-width: 20vw; */
+    flex: 1 0 40%; /* 29% ~ 1/3 + the margins*/
+    margin: 5px;
+  }
+}
+
+@media (max-width: 992px){
+  .card {
+    margin-bottom: 175px;
+    /* min-width: 300px;
+    max-width: 20vw; */
+    flex: 1 0 50%; /* 29% ~ 1/3 + the margins*/
+    margin: 5px;
+  }
 }
 
 @media (min-width: 992px){
@@ -659,6 +739,7 @@ footer .align-items-center{
   .philosophy-text {
     padding-left: 0px !important;
   }
+
 }
 
 
@@ -866,7 +947,7 @@ footer .align-items-center{
     max-width: 90vw;
     padding-top: 5vh;
     /* padding-bottom: 5vh;  */
-    padding-right: 50px;
+    padding-right: 20px;
     pointer-events: none
   }
   
@@ -889,5 +970,31 @@ footer .align-items-center{
     padding-bottom: 20px;
   }
 
+  .vision-text-col p, .vision-text-col h3 {
+    padding-right: 20px;
+  }
 
+  .vision-text-col {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .leadership-contianer p {
+    max-width: 100%;
+  }
+  
+  .leadership-contianer h3 {
+    max-width: 100%
+  }
+
+  .leadership-contianer {
+    padding-top: 0px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .house-elevation {
+    max-width: 125px;
+  }
+  
 } 
