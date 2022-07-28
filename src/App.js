@@ -16,6 +16,10 @@ import HeroProjects from './Components/HeroProjects';
 import NWAGraph from './Components/NWAGraph';
 import ADU from './Components/ADU';
 import Leadership from './Components/Leadership';
+import definition from './Assets/definition.png';
+import house1 from './Assets/house-1.png';
+import ORDENlogo from './Assets/ORDEN-logo.svg';
+import ORDENHardHat from './Assets/ORDEN_HardHat.png';
 
 
 const App = () => {
@@ -44,7 +48,7 @@ const Layout = () => {
         <div className="container" id="nav-custom">
             <a href="/">
             <img
-                src="images/ORDEN-logo.svg"
+                src={ORDENlogo}
                 className="logo"
                 style={{ maxHeight: 60, height: 60 }}
                 alt="ORDEN INV Logo"
@@ -143,7 +147,7 @@ const Home = () => {
               <p>Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim nostrud exerci tation ullamcorper suscipit  nisl ut aliquip ex ea commodo consequat. </p>
             </div>
             <div className="col-sm definition flex">
-              <img draggable='false' border="0" src='./images/definition.png'/>
+              <img draggable='false' border="0" src={definition}/>
             </div>
           </div>
         </div>
@@ -330,6 +334,7 @@ const Projects = () => {
         method: 'PUT',
         
         body: JSON.stringify({
+          // name: name,
           bedrooms: newbedrooms
           // bathrooms:
           // squarefootage:
@@ -478,7 +483,7 @@ const Projects = () => {
                       </div>
                       <div className='col'>
                         <div>
-                          <img src='./images/house-1.png' className='house-elevation'/>
+                          <img src={house1} className='house-elevation'/>
                         </div>
                       </div>  
                     </div>
@@ -505,13 +510,13 @@ const Projects = () => {
                       <br></br> 
 
                       {/* ISSUE WITH ROOMS NOT UPDATING */}
-                      {/* <br></br>
+                      <br></br>
                       <input id="update-bedrooms" value={newbedrooms} type="text" required className="form-control" 
                       onChange={(e) => updateBedrooms(e.target.value)}
                       />
                       <br></br> 
-                      <Button className='btn-dark btn-sm' onClick={() => updateBedroomStats(house.bedrooms)}>Change</Button>
-                      <br></br>  */}
+                      <Button className='btn-dark btn-sm' onClick={() => updateBedroomStats(house.id)}>Change</Button>
+                      <br></br> 
 
 
                       <br></br> 
@@ -546,7 +551,7 @@ const Contact = () => {
             <ContactForm />
           </div>
           <div className='col hard-hat'>
-            <img src='./images/ORDEN_HardHat.png' />
+            <img src={ORDENHardHat} />
           </div>
         </div>
         <div className='row info-map-row'>

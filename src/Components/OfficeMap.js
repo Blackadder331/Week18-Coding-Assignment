@@ -1,9 +1,10 @@
 import React from "react";
+import officemap from '../Assets/office-map.png'
 
 const OfficeMap = () => {
     return(
         <div>
-            <img draggable='false' border="0" src="./images/office-map.png" className="office-map image-fluid"/>
+            <img draggable='false' border="0" src={officemap} className="office-map image-fluid"/>
         </div>
     )
 }

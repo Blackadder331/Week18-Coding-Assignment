@@ -186,11 +186,11 @@ button:focus:not {
 }
 
 .navbar-toggler-icon {
-  background-image: url(../public/images/Hamburger.png) !important;
+  background-image: url(./Assets/Hamburger.png) !important;
 }
 
 button[aria-expanded="true"] .navbar-toggler-icon{
- background-image: url(../public/images/CloseX.png) !important;
+ background-image: url(./Assets/CloseX.png) !important;
 }
 
 .navbar-toggler {
@@ -323,7 +323,7 @@ form {
 }
 
 .hero-projects-bg {
-  background: url(../public/images/yellow-house.png);
+  background: url(./Assets/yellow-house.png);
   background-position: 0% 42%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -458,7 +458,7 @@ form {
 
 .image-col-projects {
   background-color: #DEE0E0;
-  background: url(../public/images/yellow-house.png);
+  background: url(./Assets/yellow-house.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center right;
@@ -536,7 +536,7 @@ form {
 
 
 .card li {
-  background: url(../public/images/bullet-marker.svg) no-repeat 0px 1.4px;
+  background: url(./Assets/bullet-marker.svg) no-repeat 0px 1.4px;
   margin: 0 2rem 0 -2em;
   padding-left: 2.5rem;
   /* margin-left: -1rem; */
@@ -546,7 +546,7 @@ form {
 }  
 
 .contact-info li {
-  background: url(../public/images/bullet-marker.svg) no-repeat 0px 1.4px;
+  background: url(./Assets/bullet-marker.svg) no-repeat 0px 1.4px;
   margin: 0 2rem 0 -2em;
   padding-left: 2.5rem;
   margin-left: -1rem;
@@ -557,7 +557,7 @@ form {
 
 
 .why-nwa-col li {
-  background: url(../public/images/bullet-marker.svg) no-repeat 0px 1.4px;
+  background: url(./Assets/bullet-marker.svg) no-repeat 0px 1.4px;
   margin: 0 2rem 0 -2em;
   padding-left: 2.5rem;
   /* margin-left: -1rem; */
@@ -567,7 +567,7 @@ form {
 }
 
 .contact-info-leadership li {
-  background: url(../public/images/bullet-marker.svg) no-repeat 0px 1.4px;
+  background: url(./Assets/bullet-marker.svg) no-repeat 0px 1.4px;
   margin: 0 2rem 0 -2em;
   padding-left: 2.5rem;
   /* margin-left: -1rem; */
@@ -578,7 +578,7 @@ form {
 
 .image-card-bg{
   background-color: #DEE0E0;
-  background: url(../public/images/interior-1.png);
+  background: url(./Assets/interior-1.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 25% 40%;

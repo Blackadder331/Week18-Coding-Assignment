@@ -1,4 +1,5 @@
 import React from "react";
+import Brick from '../Assets/brick.png'
 
 
 const Hero = () => {
@@ -7,9 +8,9 @@ const Hero = () => {
             <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div className="col-10 col-sm-8 col-lg-6">
                 <img
-                    src="./images/Brick.png"
+                    src={Brick}
                     className="d-block mx-lg-auto img-fluid brick"
-                    alt="Bootstrap Themes"
+                    alt="a brick on an orage field of color"
                     draggable='false' border="0"
                     width={700}
                     height={500}

@@ -1,4 +1,5 @@
 import React from "react";
+import ORDENlogo from '../Assets/ORDEN-logo.svg'
 
 const Nav = () => {
     return (
@@ -7,7 +8,7 @@ const Nav = () => {
             {/* <a class="navbar-brand" href="#">Orden INV</a> */}
             <a href="#">
             <img
-                src="images/ORDEN-logo.svg"
+                src={ORDENlogo}
                 className="logo"
                 style={{ maxHeight: 60, height: 60 }}
                 alt="ORDEN INV Logo"

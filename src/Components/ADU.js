@@ -1,9 +1,10 @@
 import React from "react";
+import adu from '../Assets/adu.png'
 
 const ADU = () => {
     return(
         <div>
-            <img draggable='false' border="0" src="./images/adu.png" className="nwa-graph image-fluid"/>
+            <img draggable='false' border="0" src={adu} className="nwa-graph image-fluid"/>
         </div>
     )
 }
