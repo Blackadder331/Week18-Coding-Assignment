@@ -1,7 +1,8 @@
-
 .btn {
   border-radius: 2px !important;
 } 
+
+@import url(https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap);
 
 input {
   border-radius: 2px !important;
