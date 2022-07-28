@@ -251,6 +251,7 @@ const Projects = () => {
   const [squarefootage, setSquareFootage] = useState('');
   const [price, setPrice] = useState('');
   const [newname, setNewName] = useState('');
+  const [newbedrooms, setNewBedrooms] = useState('');
 
   // GET with fetch API // GET HOUSES
   useEffect(() => {
@@ -295,7 +296,7 @@ const Projects = () => {
         
         body: JSON.stringify({
           name: newname
-          // bedrooms: 'bedrooms',
+          // bedrooms: newbedrooms
           // bathrooms:
           // squarefootage:
           // price: 
@@ -319,6 +320,39 @@ const Projects = () => {
     setNewName('');
   };
 
+
+  // Update ROOMS — not working yet
+
+  const updateBedroomStats= async (id) => {
+    let response = await fetch(
+      `https://62af76fb3bbf46a352228312.mockapi.io/api/houses/${id}`,
+      {
+        method: 'PUT',
+        
+        body: JSON.stringify({
+          bedrooms: newbedrooms
+          // bathrooms:
+          // squarefootage:
+          // price: 
+        }),
+
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },  
+      }
+    );
+    
+    const fetchHouse = async () => {
+      const response = await fetch(
+          'https://62af76fb3bbf46a352228312.mockapi.io/api/houses'
+      );
+      const data = await response.json();
+      console.log(data);
+      setHouses(data);
+    };
+    fetchHouse();
+    setNewBedrooms('');
+  };
 
 
   // Post with fetchAPI
@@ -352,6 +386,10 @@ const Projects = () => {
  
   const updateName = (value) => {
     setNewName(value)
+  }
+
+  const updateBedrooms = (value) => {
+    setNewBedrooms(value)
   }
 
  return (
@@ -465,6 +503,17 @@ const Projects = () => {
                       <br></br> 
                       <Button className='btn-dark btn-sm' onClick={() => updateHouseStats(house.id)}>Change</Button>
                       <br></br> 
+
+                      {/* ISSUE WITH ROOMS NOT UPDATING */}
+                      {/* <br></br>
+                      <input id="update-bedrooms" value={newbedrooms} type="text" required className="form-control" 
+                      onChange={(e) => updateBedrooms(e.target.value)}
+                      />
+                      <br></br> 
+                      <Button className='btn-dark btn-sm' onClick={() => updateBedroomStats(house.bedrooms)}>Change</Button>
+                      <br></br>  */}
+
+
                       <br></br> 
                     </div>
                     <div>

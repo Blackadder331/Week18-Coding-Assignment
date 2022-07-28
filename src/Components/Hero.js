@@ -16,7 +16,7 @@ const Hero = () => {
                     loading="lazy"
                 />
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-6 animate__animated animate__fadeInUp">
                 <h1 className="display-5 fw-bold lh-1 mb-3">
                     Orden INV
                 </h1>

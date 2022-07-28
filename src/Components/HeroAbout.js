@@ -8,7 +8,7 @@ const HeroAbout = () => {
                 <div className="col col-sm">
                 </div>
                 <div className="col-sm">
-                <h1 className="display-5 fw-bold lh-1 mb-3">
+                <h1 className="display-5 fw-bold lh-1 mb-3 animate__animated animate__fadeInUp">
                     About
                 </h1>
                 {/* <h3 className="lead">

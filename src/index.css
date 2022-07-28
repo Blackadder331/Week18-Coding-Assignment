@@ -70,12 +70,15 @@ footer p, footer strong {
   --bs-btn-disabled-border-color: #FF5F00 !important;
   --bs-btn-box-shadow: none !important;
   --bs-btn-focus-box-shadow: none !important;
+  
 }
 
 .btn:hover {
   background-color: #FF7E33 !important;
   border-color: #FF7E33 !important;
+  
 }
+
 
 .card .btn {
   background-color: #24272A !important;
@@ -642,6 +645,13 @@ footer .align-items-center{
   padding-bottom: 100px;
 }
 
+
+/* Animation */
+
+/* This only changes this particular animation duration */
+.animate__animated.animate__fadeInUp {
+  --animate-duration: .75s;
+}
 
 @-webkit-keyframes blink {
   0%, 100% { opacity: .25; }
