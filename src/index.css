@@ -335,6 +335,13 @@ form {
 }
 
 
+.contact-home-bg {
+  background-color: #DEE0E0;
+  padding-top: 120px;
+  padding-bottom: 50px;
+}
+
+
 .posts-container {
   display: flex;
   flex-direction: row;
@@ -867,9 +874,20 @@ footer .align-items-center{
     padding-left: 32px !important;
   }
 
+  .why-nwa-graph-container {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
 
-.why-nwa-graph-container {
-  padding-top: 90px;
-  padding-bottom: 90px;
-}
+  .contact-home-container{
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+
+  .contact-home-bg {
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+
+
 } 

@@ -192,7 +192,19 @@ const Home = () => {
 
     <HalfScreenProjects />
 
-    {/* <FiftySplit /> */}
+    <div className='contact-home-bg'>
+    <div className='container contact-home-container'>
+      <div className='row'>
+        <div className='col-sm '>
+          <h2>Contact our team</h2>
+          <br></br>
+        </div>
+        <div className='col-sm contact-home-col'>
+          <ContactForm />
+        </div>
+      </div>
+    </div>
+    </div>
 
     <Footer />
     </>

@@ -9,7 +9,7 @@ function ContactForm() {
       <FloatingLabel
         controlId="floatingTextareaName"
         label="Name"
-        className="mb-3 col-6 contact-from-item"
+        className="mb-3 col-lg-6 contact-from-item"
       >
         <Form.Control type="text" placeholder="Full name" />
       </FloatingLabel>
@@ -17,12 +17,12 @@ function ContactForm() {
       <FloatingLabel
         controlId="floatingTextareaCompany"
         label="Company"
-        className="mb-3 col-6 contact-from-item"
+        className="mb-3 col-lg-6 contact-from-item"
       >
         <Form.Control type="text" placeholder="Company name" />
       </FloatingLabel>
 
-      <Form.Floating className="mb-3 col-6 contact-from-item">
+      <Form.Floating className="mb-3 col-lg-6 contact-from-item">
         <Form.Control
           id="floatingInputEmail"
           type="email"
@@ -34,7 +34,7 @@ function ContactForm() {
       <FloatingLabel
         controlId="floatingTextareaPhone"
         label="Phone"
-        className="mb-3 col-6 contact-from-item"
+        className="mb-3 col-lg-6 contact-from-item"
       >
         <Form.Control type="tel" placeholder="(000) 000-0000" />
       </FloatingLabel>
