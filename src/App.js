@@ -1,5 +1,6 @@
 import { Routes, Route, Outlet, NavLink } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import './index.css'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
 import Button from 'react-bootstrap/Button';
@@ -147,7 +148,7 @@ const Home = () => {
               <p>Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim nostrud exerci tation ullamcorper suscipit  nisl ut aliquip ex ea commodo consequat. </p>
             </div>
             <div className="col-sm definition flex">
-              <img draggable='false' border="0" src={definition}/>
+              <img draggable='false' border="0" alt="" src={definition}/>
             </div>
           </div>
         </div>
@@ -483,7 +484,7 @@ const Projects = () => {
                       </div>
                       <div className='col'>
                         <div>
-                          <img src={house1} className='house-elevation'/>
+                          <img src={house1} alt="elevation plans of a house" className='house-elevation'/>
                         </div>
                       </div>  
                     </div>
@@ -551,7 +552,7 @@ const Contact = () => {
             <ContactForm />
           </div>
           <div className='col hard-hat'>
-            <img src={ORDENHardHat} />
+            <img src={ORDENHardHat} alt="a construction hard hat with the Orden house logomark on the front"/>
           </div>
         </div>
         <div className='row info-map-row'>
