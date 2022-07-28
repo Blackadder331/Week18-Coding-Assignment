@@ -17,9 +17,8 @@ const Footer = () => {
                         data-toggle="collapse"
                         data-target="#navbarCollapse"
                         className="nav-link"
-                        activeClassName="active"
+                        activeclassname="active"
                         to="/" 
-                        exact 
                         onClick={'data-bs-target="#navbarCollapse"'}
                         >
                         {/* <a href=" "> */}

@@ -8,7 +8,7 @@ const HalfScreenLeadership = () => {
         <div className="container-fluid">
         <div className="row half-screen-leadership" >
             
-            <div className="col-sm image-col">1 of 2</div>
+            <div className="col-sm image-col-leadership"></div>
             <div className="col-sm text-col">
                 <div className="text-col-content-leadership">
                     <h2>Leadership and vision</h2>

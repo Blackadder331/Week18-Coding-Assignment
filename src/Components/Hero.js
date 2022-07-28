@@ -10,6 +10,7 @@ const Hero = () => {
                     src="./images/Brick.png"
                     className="d-block mx-lg-auto img-fluid brick"
                     alt="Bootstrap Themes"
+                    draggable='false' border="0"
                     width={700}
                     height={500}
                     loading="lazy"

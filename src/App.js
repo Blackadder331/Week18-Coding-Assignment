@@ -3,17 +3,16 @@ import React, { useState, useEffect } from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
 import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
-import Nav from './Components/Nav.js';
 import Footer from './Components/Footer.js';
 import HalfScreenLeadership from './Components/HalfScreenLeadership';
 import HalfScreenProjects from './Components/HalfScreenProjects';
 import ContactForm from './Components/ContactForm';
 import Hero from './Components/Hero';
-import FiftySplit from './Components/FiftySplit';
 import OfficeMap from './Components/OfficeMap';
+import HeroAbout from './Components/HeroAbout';
+import HeroProjects from './Components/HeroProjects';
 
 
 const App = () => {
@@ -70,7 +69,7 @@ const Layout = () => {
                   data-toggle="collapse"
                   data-target="#navbarCollapse"
                   className="nav-link"
-                  activeClassName="active"
+                  activeclassname="active"
                   to="/" 
                   onClick={'data-bs-target="#navbarCollapse"'}
                   >
@@ -82,7 +81,7 @@ const Layout = () => {
                   data-toggle="collapse"
                   data-target="#navbarCollapse"
                   className="nav-link"
-                  activeClassName="active"
+                  activeclassname="active"
                   to="/about" 
                   onClick={'data-bs-target="#navbarCollapse"'}
                   >
@@ -94,7 +93,7 @@ const Layout = () => {
                   data-toggle="collapse"
                   data-target="#navbarCollapse"
                   className="nav-link"
-                  activeClassName="active"
+                  activeclassname="active"
                   to="/projects" 
                   onClick={'data-bs-target="#navbarCollapse"'}
                   >
@@ -106,7 +105,7 @@ const Layout = () => {
                   data-toggle="collapse"
                   data-target="#navbarCollapse"
                   className="nav-link"
-                  activeClassName="active"
+                  activeclassname="active"
                   to="/contact" 
                   onClick={'data-bs-target="#navbarCollapse"'}>
                   Contact
@@ -162,12 +161,15 @@ const Home = () => {
 const About = () => {
   return (
     <>
-      <Container   
-      >
-        <div className='about-container contianer'>
-          <h2 style={{ marginTop: '200px', marginBottom: '100px' }}>About</h2>
-        </div>
-      </Container>
+    <div className='hero-about-bg'>
+        <HeroAbout />
+    </div>
+        <Container>
+          <div className='about-container contianer'>
+            <h2 style={{ marginTop: '200px', marginBottom: '100px' }}>About</h2>
+          </div>
+        </Container>
+    
     <Footer />
     </>
   );
@@ -286,10 +288,13 @@ const Projects = () => {
 
  return (
     <>
+    <div className='hero-projects-bg'>
+      <HeroProjects />
+    </div>
     <Container style={{ paddingTop: '100px'  }} >
 
     <br></br>
-    <h1>Projects</h1>
+    <h2>Projects</h2>
     <div className="app">
     <div className="add-post-container">
       <br />
@@ -298,35 +303,35 @@ const Projects = () => {
           <input type="text" required className="form-control" placeholder="House name" value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <label for="floatingInput">House name</label>
+          <label htmlFor="floatingInput">House name</label>
         </div>
 
         <div className="add-post-container form-floating mb-3">  
           <input type="text" required className="form-control" placeholder="Number of bedrooms"value={bedrooms}
             onChange={(e) => setBedRooms(e.target.value)}
           />
-          <label for="floatingInput">Number of bedrooms</label>
+          <label htmlFor="floatingInput">Number of bedrooms</label>
         </div>
 
         <div className="add-post-container form-floating mb-3">
           <input type="text" required className="form-control" placeholder="Number of bathrooms"value={bathrooms}
             onChange={(e) => setBathRooms(e.target.value)}
           />
-          <label for="floatingInput">Number of bathrooms</label>
+          <label htmlFor="floatingInput">Number of bathrooms</label>
         </div>
 
         <div className="add-post-container form-floating mb-3">
           <input type="text" required className="form-control" placeholder="Square footage" value={squarefootage}
             onChange={(e) => setSquareFootage(e.target.value)}
           />
-          <label for="floatingInput">Square footage</label>
+          <label htmlFor="floatingInput">Square footage</label>
         </div>
 
         <div className="add-post-container form-floating mb-3">
           <input type="text" required className="form-control" placeholder="Rent" value={price}
             onChange={(e) => setPrice(e.target.value)}
           />
-          <label for="floatingInput">Rent</label>
+          <label htmlFor="floatingInput">Rent</label>
         </div>
         <Button className='btn-success' type="submit">Add House</Button>
       </form>
@@ -418,7 +423,7 @@ const Contact = () => {
           </div>
         </div>
         <div className='row info-map-row'>
-          <div className='col-sm' >
+          <div className='col-sm  contact-info-container' >
           <h3>Contact info</h3><br></br>
             <div className='row contact-info-row'>
             <div className='col-sm contact-info'> 
