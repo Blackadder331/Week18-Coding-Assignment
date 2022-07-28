@@ -451,7 +451,7 @@ form {
 
 .text-col {
   display: flex;
-  background-color: #C8CBCC;
+  background-color: #fff;
   align-items: center;
   justify-content: center;
 }
@@ -460,8 +460,33 @@ form {
   padding-bottom: 0px;
 }
 
+.nwa-graph {
+  max-width: 800px;
+  padding-top: 1.5vh;
+  /* padding-bottom: 5vh;  */
+  pointer-events: none
+}
 
+.graph-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto
 
+}
+
+.why-graph-bg {
+  background-color: #DEE0E0;
+}
+
+.why-nwa-graph-container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.why-nwa-col p {
+  max-width: 600px;
+}
 
 /* CUSTOM BULLET MARKER */
 
@@ -486,6 +511,16 @@ form {
   align-items:center;
 }  
 
+
+.why-nwa-col li {
+  background: url(../public/images/bullet-marker.svg) no-repeat 0px 1.4px;
+  margin: 0 2rem 0 -2em;
+  padding-left: 2.5rem;
+  /* margin-left: -1rem; */
+  margin-top: 10px;
+  display:flex;
+  align-items:center;
+}
 
 /* Contact Form */
 
@@ -819,4 +854,22 @@ footer .align-items-center{
     padding-left: 32px !important;
     padding-right: 32px !important;
   }
+
+  .nwa-graph {
+    max-width: 90vw;
+    padding-top: 5vh;
+    /* padding-bottom: 5vh;  */
+    padding-right: 50px;
+    pointer-events: none
+  }
+  
+  .why-nwa-col{
+    padding-left: 32px !important;
+  }
+
+
+.why-nwa-graph-container {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
 } 

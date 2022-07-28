@@ -13,6 +13,7 @@ import Hero from './Components/Hero';
 import OfficeMap from './Components/OfficeMap';
 import HeroAbout from './Components/HeroAbout';
 import HeroProjects from './Components/HeroProjects';
+import NWAGraph from './Components/NWAGraph';
 
 
 const App = () => {
@@ -145,8 +146,48 @@ const Home = () => {
           </div>
         </div>
 
-        
     </Container>
+    <div className='why-graph-bg'>
+    <div className='container why-nwa-graph-container'>
+      <div className='row'>
+        <div className='col why-nwa-col'>
+          <h2>Why Northwest Arkansas?</h2>
+          <p>body copy here. NWA is the fastest growing blah blah blah per capita! Income vs real estate property values grow year after year blah blah blah...</p>
+          <br></br>
+          <ul>
+            <li>
+              List item
+            </li>
+            <li>
+              List item
+            </li>
+            <li>
+              List item
+            </li>
+            <li>
+              List item
+            </li>
+            <li>
+              List item
+            </li>
+            <li>
+              List item
+            </li>
+            <li>
+              List item
+            </li>
+            <li>
+              List item
+            </li>
+          </ul>
+        </div>
+        <div className='col graph-col'>
+          <NWAGraph />
+        </div>
+      </div>
+    </div>
+    </div>
+
     <HalfScreenLeadership />
 
     <HalfScreenProjects />
