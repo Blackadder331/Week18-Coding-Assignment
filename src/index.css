@@ -76,11 +76,11 @@ footer p, footer strong {
   
 }
 
-.btn:hover {
+/* .btn:hover {
   background-color: #FF7E33 !important;
   border-color: #FF7E33 !important;
   
-}
+} */
 
 
 .card .btn {
@@ -92,10 +92,10 @@ footer p, footer strong {
     --bs-btn-font-size: 0.75rem !important;
 }
 
-.btn-sm:hover {
+/* .btn-sm:hover {
   background-color: #24272ad4 !important;
   border-color: #24272ad4 !important;
-}
+} */
 
 h1 {
   font-size: 8rem !important;
@@ -376,61 +376,6 @@ form {
   margin: 1rem;
 }
 
-/* /Features CSS */
-
-.features-container {
-  display: flex;
-
-  /* OPTIONAL: Reverse the order of image and content */
-  flex-direction: row-reverse;
-
-  /* OPTIONAL: Spacing between items */
-  margin: 50px 0;
-}
-
-.features-container-rev {
-  display: flex;
-  flex-direction: flex-end;
-
-
-  /* OPTIONAL: Reverse the order of image and content 
-  flex-direction: row-reverse;*/
-
-  /* OPTIONAL: Spacing between items */
-  margin: 16px 0;
-
-}
-
-.container__image {
-  width: 300px;
-  border-radius: 1000px;
-  
-}
-
-.container__image img{
-  
-  border-radius: 1000px;
-  width:300px;
-  height:300px;
-  object-fit:cover;
-
-}
-.container__feature {
-  /* Take the remaining width */
-  flex: 1;
-  margin-right: 50px;
-  justify-content: center;
-  align-self: center;
-}
-
-.left-image {
-  margin-right: 50px;
-
-}
-
-.container-fluid {
-  padding-bottom: 100px;
-}
 
 /* Half Section */
 
@@ -679,6 +624,66 @@ footer .align-items-center{
   -o-animation: blink 3s infinite;
   animation: blink 3s infinite;
 }
+
+/* Button slide animation */
+
+
+/* Background slide */
+.btn {
+  background-color: var(--background-color);
+  color: #222;
+  padding: .5em 1em;
+  border: none;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+
+  --background-color: #e3e3e3;
+  --border-size: 2px;
+  /* --accent-color: #24272A; */
+  /* --accent-color: #FF7E33;
+  --accent-color: #90C7CB;
+  --accent-color: #75CAE6;
+  --accent-color: #95A664; */
+  --accent-color: #8AA9BC;
+}
+
+
+.btn.btn-background-slide::before {
+  content: '';
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: -1;
+  background-color: var(--accent-color);
+
+  transition: transform 300ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.btn.btn-background-slide:hover::before,
+.btn.btn-background-slide:focus::before {
+  transform: scaleX(1);
+}
+
+.btn.btn-background-slide {
+  transition: color 300ms ease-in-out;
+  z-index: 1;
+}
+
+.btn.btn-background-slide:hover,
+.btn.btn-background-slide:focus {
+  color: #fff;
+  color: #24272A;
+}
+
+
+
+
+
 
 /* Large displays */
 @media (min-width: 1400px){

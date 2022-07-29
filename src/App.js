@@ -326,7 +326,7 @@ const Projects = () => {
   };
 
 
-  // Update ROOMS — not working yet
+  // Update ROOMS
 
   const updateBedroomStats= async (id) => {
     let response = await fetch(
@@ -445,7 +445,7 @@ const Projects = () => {
           />
           <label htmlFor="floatingInput">Rent</label>
         </div>
-        <Button className='btn-success' type="submit">Add House</Button>
+        <Button className='btn-success btn-background-slide' type="submit">Add House</Button>
       </form>
     </div>
     <div className="posts-container">
@@ -489,7 +489,7 @@ const Projects = () => {
                       </div>  
                     </div>
                     </Card.Body>
-                    <Button className='btn-dark btn-sm post-btn' type='button'>
+                    <Button className='btn-dark btn-sm post-btn btn-background-slide' type='button'>
                       <div className="button">
                         <div className="delete-btn" onClick={() => deleteHouse(house.id)}>
                           Delete
@@ -507,7 +507,7 @@ const Projects = () => {
                       onChange={(e) => updateName(e.target.value)}
                       />
                       <br></br> 
-                      <Button className='btn-dark btn-sm' onClick={() => updateHouseStats(house.id)}>Change</Button>
+                      <Button className='btn-dark btn-sm btn-background-slide' onClick={() => updateHouseStats(house.id)}>Change</Button>
                       <br></br> 
 
                       {/* ISSUE WITH ROOMS NOT UPDATING */}
@@ -516,7 +516,7 @@ const Projects = () => {
                       onChange={(e) => updateBedrooms(e.target.value)}
                       />
                       <br></br> 
-                      <Button className='btn-dark btn-sm' onClick={() => updateBedroomStats(house.id)}>Change</Button>
+                      <Button className='btn-dark btn-sm btn-background-slide' onClick={() => updateBedroomStats(house.id)}>Change</Button>
                       <br></br> 
 
 

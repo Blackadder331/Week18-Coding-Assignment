@@ -50,7 +50,7 @@ function ContactForm() {
         <br></br>
         <br></br>
       </div>
-      <Button variant="primary" type="submit">
+      <Button variant="primary" type="submit" className='btn-background-slide' >
         Submit
       </Button>
     </Form>
