@@ -523,10 +523,18 @@ const Projects = () => {
     <div className='hero-projects-bg'>
       <HeroProjects />
     </div>
-    <Container style={{ paddingTop: '100px'  }} >
+    <Container style={{ paddingTop: '100px'  }} className="project-container">
+    <div className='row'>
+      <div className='col'>
+      <h2>Blair Ave. homes</h2>
+      </div>
+      <div className='col'>
+        
+      </div>
 
+    </div>
     <br></br>
-    <h2>Projects</h2>
+    
     <div className="app">
     <div className="add-post-container">
       <br />

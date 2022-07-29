@@ -42,7 +42,7 @@ input[type="color"]:focus,
 .uneditable-input:focus,
 .accordion-button:focus,
 #floatingTextarea2:focus {   
-  outline: solid #8AA9BC90 4px;
+  outline: solid #8AA9BC90 3px;
   border-color:  #8AA9BC90;
   box-shadow: none;
   -moz-box-shadow: none;
@@ -51,7 +51,7 @@ input[type="color"]:focus,
 
 .accordion-button:focus {
   z-index: 3;
-  outline: solid #8AA9BC90 4px;
+  outline: solid #8AA9BC90 3px;
   border-color:  #8AA9BC90;
   box-shadow: none;
   -moz-box-shadow: none;
@@ -73,7 +73,7 @@ button.accordion-button::after{
 }
 
 button.accordion-button:focus{
-  outline: solid #8AA9BC 4px;
+  outline: solid #8AA9BC 3px;
   border-color:  #8AA9BC;
   box-shadow: none;
   -moz-box-shadow: none;
@@ -226,7 +226,7 @@ h5 {
 .navbar ul {
   align-items: center !important;
   justify-content: center !important;
-  height: 85vh;
+  height: 100vh;
   font-size: 30px;
   line-height: 10vh;
 }
@@ -1090,6 +1090,10 @@ footer .align-items-center{
 
   .house-elevation {
     max-width: 125px;
+  }
+
+  .project-container h2{
+    padding-left: 20px !important;
   }
   
 } 
