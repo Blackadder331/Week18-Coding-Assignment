@@ -17,6 +17,7 @@ import HeroProjects from './Components/HeroProjects';
 import NWAGraph from './Components/NWAGraph';
 import ADU from './Components/ADU';
 import Leadership from './Components/Leadership';
+import {Accordion} from 'react-bootstrap';
 import definition from './Assets/definition.png';
 import house1 from './Assets/house-1.png';
 import ORDENlogo from './Assets/ORDEN-logo.svg';
@@ -257,6 +258,9 @@ const Projects = () => {
   const [price, setPrice] = useState('');
   const [newname, setNewName] = useState('');
   const [newbedrooms, setNewBedrooms] = useState('');
+  const [newbathrooms, setNewBathrooms] = useState('');
+  const [newsquarefootage, setNewSquareFootage] = useState('');
+  const [newprice, setNewPrice] = useState('');
 
   // GET with fetch API // GET HOUSES
   useEffect(() => {
@@ -326,7 +330,7 @@ const Projects = () => {
   };
 
 
-  // Update ROOMS
+  // Update BEDROOMS
 
   const updateBedroomStats= async (id) => {
     let response = await fetch(
@@ -359,6 +363,110 @@ const Projects = () => {
     fetchHouse();
     setNewBedrooms('');
   };
+
+  // Update BATHROOMS
+
+  const updateBathroomStats= async (id) => {
+    let response = await fetch(
+      `https://62af76fb3bbf46a352228312.mockapi.io/api/houses/${id}`,
+      {
+        method: 'PUT',
+        
+        body: JSON.stringify({
+          // name: name,
+          // bedrooms: newbedrooms
+          bathrooms: newbathrooms
+          // squarefootage:
+          // price: 
+        }),
+
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },  
+      }
+    );
+    
+    const fetchHouse = async () => {
+      const response = await fetch(
+          'https://62af76fb3bbf46a352228312.mockapi.io/api/houses'
+      );
+      const data = await response.json();
+      console.log(data);
+      setHouses(data);
+    };
+    fetchHouse();
+    setNewBathrooms('');
+  };
+
+
+    // Update SQUAREFOOTAGE
+
+    const updateSquareFootageStats= async (id) => {
+      let response = await fetch(
+        `https://62af76fb3bbf46a352228312.mockapi.io/api/houses/${id}`,
+        {
+          method: 'PUT',
+          
+          body: JSON.stringify({
+            // name: name,
+            // bedrooms: newbedrooms
+            // bathrooms: newbathrooms
+            squarefootage: newsquarefootage
+            // price: 
+          }),
+  
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+          },  
+        }
+      );
+      
+      const fetchHouse = async () => {
+        const response = await fetch(
+            'https://62af76fb3bbf46a352228312.mockapi.io/api/houses'
+        );
+        const data = await response.json();
+        console.log(data);
+        setHouses(data);
+      };
+      fetchHouse();
+      setNewSquareFootage('');
+    };
+
+
+    // Update PRICE
+
+    const updatePriceStats= async (id) => {
+      let response = await fetch(
+        `https://62af76fb3bbf46a352228312.mockapi.io/api/houses/${id}`,
+        {
+          method: 'PUT',
+          
+          body: JSON.stringify({
+            // name: name,
+            // bedrooms: newbedrooms
+            // bathrooms: newbathrooms
+            // squarefootage: newsquarefootage
+            price: newprice
+          }),
+  
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+          },  
+        }
+      );
+      
+      const fetchHouse = async () => {
+        const response = await fetch(
+            'https://62af76fb3bbf46a352228312.mockapi.io/api/houses'
+        );
+        const data = await response.json();
+        console.log(data);
+        setHouses(data);
+      };
+      fetchHouse();
+      setNewPrice('');
+    };
 
 
   // Post with fetchAPI
@@ -396,6 +504,18 @@ const Projects = () => {
 
   const updateBedrooms = (value) => {
     setNewBedrooms(value)
+  }
+
+  const updateBathrooms = (value) => {
+    setNewBathrooms(value)
+  }
+
+  const updateSquareFootage = (value) => {
+    setNewSquareFootage(value)
+  }
+
+  const updatePrice = (value) => {
+    setNewPrice(value)
   }
 
  return (
@@ -489,18 +609,18 @@ const Projects = () => {
                       </div>  
                     </div>
                     </Card.Body>
-                    <Button className='btn-dark btn-sm post-btn btn-background-slide' type='button'>
-                      <div className="button">
-                        <div className="delete-btn" onClick={() => deleteHouse(house.id)}>
-                          Delete
-                        </div>
-                      </div>    
-                    </Button> 
+                    
                     <br></br> 
 
                     <Card.Footer>
                       <div>
-                      <br></br>
+                      
+
+                      <Accordion>
+                      <Accordion.Item eventKey="0">
+                        <Accordion.Header>Edit Home Details</Accordion.Header>
+                        <Accordion.Body>
+                        <br></br>
                       <h5>Update Features</h5>
                       <br></br>
                       <input id="update-name" value={newname} type="text" required className="form-control" 
@@ -510,7 +630,7 @@ const Projects = () => {
                       <Button className='btn-dark btn-sm btn-background-slide' onClick={() => updateHouseStats(house.id)}>Change</Button>
                       <br></br> 
 
-                      {/* ISSUE WITH ROOMS NOT UPDATING */}
+                      {/* BEDROOMS UPDATING */}
                       <br></br>
                       <input id="update-bedrooms" value={newbedrooms} type="text" required className="form-control" 
                       onChange={(e) => updateBedrooms(e.target.value)}
@@ -520,7 +640,53 @@ const Projects = () => {
                       <br></br> 
 
 
+                      {/* BATHROOMS UPDATING */}
+                      <br></br>
+                      <input id="update-bathrooms" value={newbathrooms} type="text" required className="form-control" 
+                      onChange={(e) => updateBathrooms(e.target.value)}
+                      />
                       <br></br> 
+                      <Button className='btn-dark btn-sm btn-background-slide' onClick={() => updateBathroomStats(house.id)}>Change</Button>
+                      <br></br>
+
+
+                      {/* SQUAREFOOTAGE UPDATING */}
+                      <br></br>
+                      <input id="update-squarefootage" value={newsquarefootage} type="text" required className="form-control" 
+                      onChange={(e) => updateSquareFootage(e.target.value)}
+                      />
+                      <br></br> 
+                      <Button className='btn-dark btn-sm btn-background-slide' onClick={() => updateSquareFootageStats(house.id)}>Change</Button>
+                      <br></br>
+
+                      {/* PRICE UPDATING */}
+                      <br></br>
+                      <input id="update-price" value={newprice} type="text" required className="form-control" 
+                      onChange={(e) => updatePrice(e.target.value)}
+                      />
+                      <br></br> 
+                      <Button className='btn-dark btn-sm btn-background-slide' onClick={() => updatePriceStats(house.id)}>Change</Button>
+                      <br></br>
+
+
+                      {/* DELETE HOUSE */}
+                      <br></br>
+                      <br></br>
+                      <h5>Delete House</h5>
+                    
+                      <Button className='btn-dark btn-sm post-btn btn-background-slide delete-btn' type='button' onClick={() => deleteHouse(house.id)}>
+                        
+                       Delete house
+                   
+                      </Button> 
+                      <br></br>
+                      <br></br>
+                        </Accordion.Body>
+                      </Accordion.Item>
+                    </Accordion>
+
+
+                    
                     </div>
                     <div>
 
