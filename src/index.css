@@ -837,9 +837,13 @@ footer .align-items-center{
     padding-left: 50px;
     padding-top: 100px;
   }
-
-  
 }
+
+@media (max-width: 1200px){
+  .house-elevation {
+      max-width: 190px;
+    }
+  }
 
 @media (max-width: 992px){
   .card {
