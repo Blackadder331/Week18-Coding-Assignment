@@ -20,8 +20,25 @@ import Leadership from './Components/Leadership';
 import {Accordion} from 'react-bootstrap';
 import definition from './Assets/definition.png';
 import house1 from './Assets/house-1.png';
+import house2 from  './Assets/house-2.png';
+import house3 from './Assets/house-3.png';
+import house4 from './Assets/house-4.png';
+import house5 from  './Assets/house-5.png';
+import house6 from './Assets/house-6.png';
+import house7 from './Assets/house-7.png';
+import house8 from  './Assets/house-8.png';
+import house9 from './Assets/house-9.png';
 import ORDENlogo from './Assets/ORDEN-logo.svg';
 import ORDENHardHat from './Assets/ORDEN_HardHat.png';
+import interior1 from './Assets/interior-1.png';
+import interior2 from './Assets/interior-2.png'
+import interior3 from './Assets/interior-3.png'
+import interior4 from './Assets/interior-4.jpg';
+import interior5 from './Assets/interior-5.jpg';
+import interior6 from './Assets/interior-6.jpg';
+import interior7 from './Assets/interior-7.jpg';
+import interior8 from './Assets/interior-8.jpg';
+import interior9 from './Assets/interior-9.jpg';
 
 
 const App = () => {
@@ -261,6 +278,22 @@ const Projects = () => {
   const [newbathrooms, setNewBathrooms] = useState('');
   const [newsquarefootage, setNewSquareFootage] = useState('');
   const [newprice, setNewPrice] = useState('');
+
+  // Images
+  const HouseElevations =[house1, house2, house3, house4, house5, house6, house7, house8, house9];
+
+  let h = 0;
+
+  const HouseInteriors =[interior1, interior2, interior3, interior4, interior5, interior6, interior8, interior7, interior9];
+
+  let i = 0;
+  // { HouseElevations.map((url) => (
+    
+  //       <img src={url} class="icon" height="42" width="42" />
+      
+  // ))}
+
+
 
   // GET with fetch API // GET HOUSES
   useEffect(() => {
@@ -523,10 +556,10 @@ const Projects = () => {
     <div className='hero-projects-bg'>
       <HeroProjects />
     </div>
-    <Container style={{ paddingTop: '100px'  }} className="project-container">
-    <div className='row'>
+    <Container style={{ paddingTop: '100px'  }} className="project-container ">
+    <div className='row project-intro'>
       <div className='col'>
-      <h2>Blair Ave. homes</h2>
+      <h2>Blair Avenue homes</h2>
       </div>
       <div className='col'>
         
@@ -582,9 +615,18 @@ const Projects = () => {
 
                 <Card className="post-card" key={house.id}>
                     <Card.Header>
-                    <div className='image-card-bg'>
-                          
-                    </div>
+                    
+                          <div className='image-card-bg'  style={{ 
+                            
+                            backgroundImage: `url(${HouseInteriors[i++]})`,
+                            backgroundPosition: 'center',
+                            backgroundSize: 'cover',
+                            backgroundRepeat: 'no-repeat' 
+                            
+                            }}>
+                          </div>
+
+                    
                     </Card.Header>
                     <br></br>
                     <Card.Body className="post-body">
@@ -610,9 +652,9 @@ const Projects = () => {
                             </ul>
                         </div>
                       </div>
-                      <div className='col'>
+                      <div className='col elevations-col'>
                         <div>
-                          <img src={house1} alt="elevation plans of a house" className='house-elevation'/>
+                          <img src={HouseElevations[h++]} className='house-elevation'/>
                         </div>
                       </div>  
                     </div>
@@ -626,21 +668,23 @@ const Projects = () => {
 
                       <Accordion>
                       <Accordion.Item eventKey="0">
-                        <Accordion.Header>Edit Home Details</Accordion.Header>
+                        <Accordion.Header>Edit details</Accordion.Header>
                         <Accordion.Body>
                         <br></br>
                       <h5>Update Features</h5>
                       <br></br>
-                      <input id="update-name" value={newname} type="text" required className="form-control" 
-                      onChange={(e) => updateName(e.target.value)}
-                      />
+                      
+                        <input id="update-name" value={newname} type="text" required className="form-control" placeholder="Update name"
+                        onChange={(e) => updateName(e.target.value)}
+                        />
+                      
                       <br></br> 
                       <Button className='btn-dark btn-sm btn-background-slide' onClick={() => updateHouseStats(house.id)}>Change</Button>
                       <br></br> 
 
                       {/* BEDROOMS UPDATING */}
                       <br></br>
-                      <input id="update-bedrooms" value={newbedrooms} type="text" required className="form-control" 
+                      <input id="update-bedrooms" value={newbedrooms} type="text" required className="form-control" placeholder="Update bedrooms"
                       onChange={(e) => updateBedrooms(e.target.value)}
                       />
                       <br></br> 
@@ -650,7 +694,7 @@ const Projects = () => {
 
                       {/* BATHROOMS UPDATING */}
                       <br></br>
-                      <input id="update-bathrooms" value={newbathrooms} type="text" required className="form-control" 
+                      <input id="update-bathrooms" value={newbathrooms} type="text" required className="form-control" placeholder="Update Bathrooms"
                       onChange={(e) => updateBathrooms(e.target.value)}
                       />
                       <br></br> 
@@ -660,7 +704,7 @@ const Projects = () => {
 
                       {/* SQUAREFOOTAGE UPDATING */}
                       <br></br>
-                      <input id="update-squarefootage" value={newsquarefootage} type="text" required className="form-control" 
+                      <input id="update-squarefootage" value={newsquarefootage} type="text" required className="form-control" placeholder="Update square footage"
                       onChange={(e) => updateSquareFootage(e.target.value)}
                       />
                       <br></br> 
@@ -669,7 +713,7 @@ const Projects = () => {
 
                       {/* PRICE UPDATING */}
                       <br></br>
-                      <input id="update-price" value={newprice} type="text" required className="form-control" 
+                      <input id="update-price" value={newprice} type="text" required className="form-control" placeholder="Update price"
                       onChange={(e) => updatePrice(e.target.value)}
                       />
                       <br></br> 
@@ -690,22 +734,17 @@ const Projects = () => {
                       <br></br>
                       <br></br>
                         </Accordion.Body>
-                      </Accordion.Item>
-                    </Accordion>
-
-
-                    
-                    </div>
-                    <div>
-
+                        </Accordion.Item>
+                      </Accordion>
                     </div>
                     </Card.Footer>
                 </Card>
+
+                
               );
           })}
         </div>
     </div>
-    
     </Container>
     <Footer />
     </>

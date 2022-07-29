@@ -56,7 +56,7 @@ const Footer = () => {
                 <div className="col back-to-top">
                     <div>
                         <p className="float-end">
-                        <a href="/#"><img
+                        <a href="#"><img
                                 src={footerarrow}
                                 className="blink footer-arrow"
                                 style={{ height: 65 }}
