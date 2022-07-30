@@ -50,7 +50,27 @@ const App = () => {
         <Route path="about" element={<About />} />
         <Route path="projects" element={<Projects/>} />
         <Route path="contact" element={<Contact />} />
-        <Route path="*" element={<p>There's nothing here: 404!</p>} />
+        <Route path="*" element={<Container fluid style={{backgroundImage: `url(${interior4})`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        height: '100vh',
+        width: '100vw',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        color: '#fff',
+        textAlign: 'center',
+        paddingBottom: '124px'
+        }}><h1 style={{paddingTop: '200px'}}>
+          There's nothing here: <br></br> 404!
+        </h1>
+        <div>
+          <br></br>
+        <a href="/" className="btn btn-primary btn-background-slide" style={{marginTop: '60px'}}>Go back home</a>
+        </div>
+        </Container>
+        } /> 
       </Route>
     </Routes>
   );
@@ -260,7 +280,6 @@ const About = () => {
           </div>
           <Leadership />
         </Container>
-    
     <Footer />
     </>
   );
