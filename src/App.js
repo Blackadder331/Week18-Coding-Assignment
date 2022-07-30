@@ -630,16 +630,16 @@ const Projects = () => {
                     <h2 className="post-title">{house.name}</h2>
                     <br></br>
                     <div className='row'>
-                      <div className='col'>
+                      <div className='col house-stats'>
                         <div>
-                          <ul>
+                          <ul className='house-stat-list'>
                               <li>
                                 {house.bedrooms} Bed
                               </li>
                               <li>
                               {house.bathrooms} Bath
                               </li>
-                              <li>
+                              <li className='square-footage-text'>
                               {house.squarefootage} Sq Ft
                               </li>
                               <li>

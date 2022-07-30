@@ -1021,6 +1021,10 @@ footer .align-items-center{
   
   }
 
+  .hero {
+    height: 884px;
+  }
+
   .philosophy-text {
     padding-left: 0px !important;
   }
@@ -1396,5 +1400,17 @@ footer .align-items-center{
   .hero h1 {
     font-size: 60px !important;
     margin-bottom: 6px !important;
+  }
+  
+  .house-stats {
+    padding-right: 0px !important;
+  }
+
+  .elevations-col {
+    padding-left: 0px !important;
+  }
+
+  .house-stat-list {
+    letter-spacing: -0.06rem;
   }
 } 
