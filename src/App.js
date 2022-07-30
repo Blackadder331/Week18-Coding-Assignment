@@ -67,7 +67,7 @@ const App = () => {
         </h1>
         <div>
           <br></br>
-        <a href="/" className="btn btn-primary btn-background-slide" style={{marginTop: '60px'}}>Go back home</a>
+        <a href="/" className="btn btn-primary btn-background-slide animate__animated animate__fadeInUp" style={{marginTop: '60px'}}>Go back home</a>
         </div>
         </Container>
         } /> 
