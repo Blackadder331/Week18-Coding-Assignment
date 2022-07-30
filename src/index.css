@@ -1413,4 +1413,17 @@ footer .align-items-center{
   .house-stat-list {
     letter-spacing: -0.06rem;
   }
+
+  .hero .animate__animated.animate__fadeIn {
+    --animate-duration: .75s;
+  }
 } 
+
+@media only screen and (max-width: 390px) {
+  .hero-bg{
+    height: 100vh !important;
+  }
+  .hero .animate__animated.animate__fadeIn {
+    --animate-duration: .75s;
+  }
+}
