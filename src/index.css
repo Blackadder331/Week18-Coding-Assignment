@@ -1031,7 +1031,44 @@ footer .align-items-center{
     padding-bottom: 30px !important;
   }
 
+  
 
+}
+
+/* Tablet displays */
+@media only screen and (max-width: 768px) {
+  /* .text-col{
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  } */
+  .text-col-content-leadership{
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+  }
+  .text-col-content-projects{
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+  }
+
+  .half-screen-leadership{
+    flex-direction: column-reverse;
+  }
+
+  .logo-footer{
+    padding-bottom: 80px;
+  }
+
+  .back-to-top{
+    float: left !important;
+    display: flex;
+    flex-direction: column !important;
+    align-items: start !important;
+    padding-top: 50px;
+  } 
 
 }
 
@@ -1083,8 +1120,8 @@ footer .align-items-center{
   .text-col-content-leadership {
     padding-top: 50px;
     padding-bottom: 50px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 20px !important;
+    padding-left: 20px !important;
     min-height: 33vh;
     justify-content: center;
   }
@@ -1092,8 +1129,8 @@ footer .align-items-center{
   .text-col-content-projects {
     padding-top: 50px;
     padding-bottom: 50px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 20px !important;
+    padding-left: 20px !important;
     min-height: 33vh;
   }
 
@@ -1294,10 +1331,12 @@ footer .align-items-center{
     display: flex;
     flex-direction: row;
     align-items: center; 
+    justify-content: flex-end;
+    max-width: 125px;
   }
 
   .house-elevation {
-    max-width: 125px;
+    max-width: 122px;
   }
 
   .project-intro h2{

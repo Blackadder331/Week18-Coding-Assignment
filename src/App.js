@@ -221,7 +221,7 @@ const Home = () => {
     <div className='contact-home-bg'>
     <div className='container contact-home-container'>
       <div className='row'>
-        <div className='col-sm '>
+        <div className='col-lg '>
           <h2>Contact our team</h2>
           <br></br>
         </div>

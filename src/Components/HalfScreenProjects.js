@@ -15,7 +15,7 @@ const HalfScreenProjects = () => {
                     <a href="/projects" className="btn btn-primary btn-background-slide">Call to action</a>
                 </div>
             </div>
-            <div className="col-sm image-col-projects"></div>
+            <div className="col-md image-col-projects"></div>
         </div>
     </div>
     )

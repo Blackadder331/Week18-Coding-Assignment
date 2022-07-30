@@ -13,7 +13,7 @@ const Footer = () => {
            
             <br />
             <div className="row align-items-center">
-                <div className="col col-6 logo-footer">
+                <div className="col-lg-6 logo-footer">
                     <div>
                         <NavLink 
                         data-toggle="collapse"
@@ -34,7 +34,7 @@ const Footer = () => {
                         </NavLink>
                     </div>
                 </div>
-                <div className="col">
+                <div className="col-lg">
                     <p><strong>Address</strong>
                     <br />100 W. Center Street 
                     <br />Suite 300
@@ -42,7 +42,7 @@ const Footer = () => {
                     <br />72701
                     </p>
                 </div>
-                <div className="col">
+                <div className="col-lg">
                     <div>
                         <p><strong>Contact</strong>
                         <br />rob@sharparch.net
@@ -53,7 +53,7 @@ const Footer = () => {
                         </p>
                     </div>
                 </div>
-                <div className="col back-to-top">
+                <div className="col-lg back-to-top">
                     <div>
                         <p className="float-end">
                         <a href="#"><img
