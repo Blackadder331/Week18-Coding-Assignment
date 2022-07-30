@@ -1451,10 +1451,14 @@ footer .align-items-center{
   .project-intro h2 {
     padding-left: 32px !important;
   }
+  
+  .image-card-bg {
+    min-height: 250px;
+  }
 
 } 
 
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 385px) {
   .hero-bg{
     height: 100vh !important;
   }
