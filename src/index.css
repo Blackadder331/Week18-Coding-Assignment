@@ -769,6 +769,10 @@ footer .align-items-center{
   padding: .75rem;
 }
 
+.hero .animate__animated.animate__fadeIn {
+  --animate-duration: 1.5s;
+  /* --animate-delay: 40s; */
+}
 
 
 
@@ -1031,6 +1035,10 @@ footer .align-items-center{
     padding-bottom: 30px !important;
   }
 
+  .leadership-contianer,
+  .vision-container {
+    padding-left: 0px !important;
+  }
   
 
 }
@@ -1281,7 +1289,7 @@ footer .align-items-center{
     max-width: 90vw;
     padding-top: 5vh;
     /* padding-bottom: 5vh;  */
-    padding-right: 20px;
+    padding-right: 10px;
     pointer-events: none
   }
   
@@ -1346,5 +1354,47 @@ footer .align-items-center{
 
   .post-title{
     padding-left: 0px !important;
+  }
+
+  footer {
+    padding-left: 20px !important;
+  }
+
+  .hero .brick-container{
+    margin-top: 1.75rem;
+  }
+
+  .brick {
+    transform: translate(0px, 14px);
+  }
+
+  .hero .py-5 {
+    padding-top: 0rem!important;
+    padding-bottom: 1rem!important;
+  }
+
+  .hero .orden-container {
+    padding-top: 0rem!important;
+    padding-bottom: 0rem!important;
+    margin-top: 2rem!important;
+    margin-bottom: 0rem!important;
+  }
+
+  .philosophy {
+    margin-top: 80px;
+    margin-bottom: 50px;
+  }
+
+  .graph-col{
+    padding-top: 20px;
+  }
+  
+  .why-nwa-graph-container{
+    padding-bottom: 70px;
+  }
+
+  .hero h1 {
+    font-size: 60px !important;
+    margin-bottom: 6px !important;
   }
 } 

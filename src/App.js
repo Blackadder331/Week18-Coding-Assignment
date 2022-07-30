@@ -77,10 +77,6 @@ const App = () => {
 };
 
 const Layout = () => {
-  // const style = ({ isActive }) => ({
-  //   fontWeight: isActive ? 'bold' : 'normal',
-  // });
-
   return (
     <>
       <nav className="navbar navbar-expand-xxxl navbar-light fixed-top bg-white">
@@ -175,7 +171,6 @@ const Home = () => {
     <Hero />
     </div>
     <Container>
-      
         <div className="container philosophy">
           <div className="row align-items-start">
             <div className="col-sm philosophy-text">
@@ -190,7 +185,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-
     </Container>
     <div className='why-graph-bg'>
     <div className='container why-nwa-graph-container'>
@@ -233,11 +227,8 @@ const Home = () => {
       </div>
     </div>
     </div>
-
     <HalfScreenLeadership />
-
     <HalfScreenProjects />
-
     <div className='contact-home-bg'>
     <div className='container contact-home-container'>
       <div className='row'>
@@ -251,7 +242,6 @@ const Home = () => {
       </div>
     </div>
     </div>
-
     <Footer />
     </>
   );
@@ -298,23 +288,20 @@ const Projects = () => {
   const [newsquarefootage, setNewSquareFootage] = useState('');
   const [newprice, setNewPrice] = useState('');
 
-  // Images
+  // Elevations
   const HouseElevations =[house1, house2, house3, house4, house5, house6, house7, house8, house9];
 
   let h = 0;
 
+  // Interior Photos
   const HouseInteriors =[interior1, interior2, interior3, interior4, interior5, interior6, interior8, interior7, interior9];
 
   let i = 0;
-  // { HouseElevations.map((url) => (
-    
-  //       <img src={url} class="icon" height="42" width="42" />
-      
-  // ))}
 
 
 
-  // GET with fetch API // GET HOUSES
+
+  // GET HOUSES
   useEffect(() => {
     const fetchHouse = async () => {
       const response = await fetch(
@@ -328,7 +315,7 @@ const Projects = () => {
   }, []);
 
 
-  // Delete with fetchAPI
+  // DELETE 
   const deleteHouse = async (id) => {
     let response = await fetch(
       `https://62af76fb3bbf46a352228312.mockapi.io/api/houses/${id}`,
@@ -348,7 +335,7 @@ const Projects = () => {
   };
 
 
-  //PUT 
+  // PUT 
   const updateHouseStats= async (id) => {
     let response = await fetch(
       `https://62af76fb3bbf46a352228312.mockapi.io/api/houses/${id}`,
@@ -383,7 +370,6 @@ const Projects = () => {
 
 
   // Update BEDROOMS
-
   const updateBedroomStats= async (id) => {
     let response = await fetch(
       `https://62af76fb3bbf46a352228312.mockapi.io/api/houses/${id}`,
@@ -417,7 +403,6 @@ const Projects = () => {
   };
 
   // Update BATHROOMS
-
   const updateBathroomStats= async (id) => {
     let response = await fetch(
       `https://62af76fb3bbf46a352228312.mockapi.io/api/houses/${id}`,
@@ -451,77 +436,75 @@ const Projects = () => {
   };
 
 
-    // Update SQUAREFOOTAGE
+  // Update SQUAREFOOTAGE
+  const updateSquareFootageStats= async (id) => {
+    let response = await fetch(
+      `https://62af76fb3bbf46a352228312.mockapi.io/api/houses/${id}`,
+      {
+        method: 'PUT',
+        
+        body: JSON.stringify({
+          // name: name,
+          // bedrooms: newbedrooms
+          // bathrooms: newbathrooms
+          squarefootage: newsquarefootage
+          // price: 
+        }),
 
-    const updateSquareFootageStats= async (id) => {
-      let response = await fetch(
-        `https://62af76fb3bbf46a352228312.mockapi.io/api/houses/${id}`,
-        {
-          method: 'PUT',
-          
-          body: JSON.stringify({
-            // name: name,
-            // bedrooms: newbedrooms
-            // bathrooms: newbathrooms
-            squarefootage: newsquarefootage
-            // price: 
-          }),
-  
-          headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-          },  
-        }
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },  
+      }
+    );
+    
+    const fetchHouse = async () => {
+      const response = await fetch(
+          'https://62af76fb3bbf46a352228312.mockapi.io/api/houses'
       );
-      
-      const fetchHouse = async () => {
-        const response = await fetch(
-            'https://62af76fb3bbf46a352228312.mockapi.io/api/houses'
-        );
-        const data = await response.json();
-        console.log(data);
-        setHouses(data);
-      };
-      fetchHouse();
-      setNewSquareFootage('');
+      const data = await response.json();
+      console.log(data);
+      setHouses(data);
     };
+    fetchHouse();
+    setNewSquareFootage('');
+  };
 
 
-    // Update PRICE
+  // Update PRICE
+  const updatePriceStats= async (id) => {
+    let response = await fetch(
+      `https://62af76fb3bbf46a352228312.mockapi.io/api/houses/${id}`,
+      {
+        method: 'PUT',
+        
+        body: JSON.stringify({
+          // name: name,
+          // bedrooms: newbedrooms
+          // bathrooms: newbathrooms
+          // squarefootage: newsquarefootage
+          price: newprice
+        }),
 
-    const updatePriceStats= async (id) => {
-      let response = await fetch(
-        `https://62af76fb3bbf46a352228312.mockapi.io/api/houses/${id}`,
-        {
-          method: 'PUT',
-          
-          body: JSON.stringify({
-            // name: name,
-            // bedrooms: newbedrooms
-            // bathrooms: newbathrooms
-            // squarefootage: newsquarefootage
-            price: newprice
-          }),
-  
-          headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-          },  
-        }
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },  
+      }
+    );
+    
+    const fetchHouse = async () => {
+      const response = await fetch(
+          'https://62af76fb3bbf46a352228312.mockapi.io/api/houses'
       );
-      
-      const fetchHouse = async () => {
-        const response = await fetch(
-            'https://62af76fb3bbf46a352228312.mockapi.io/api/houses'
-        );
-        const data = await response.json();
-        console.log(data);
-        setHouses(data);
-      };
-      fetchHouse();
-      setNewPrice('');
+      const data = await response.json();
+      console.log(data);
+      setHouses(data);
     };
+    fetchHouse();
+    setNewPrice('');
+  };
 
 
-  // Post with fetchAPI
+  // POST
   const addHouses = async (name, bedrooms, bathrooms, squarefootage, price) => {
     let response = await fetch('https://62af76fb3bbf46a352228312.mockapi.io/api/houses', {
       method: 'POST',
@@ -581,16 +564,14 @@ const Projects = () => {
       <h2>Blair Avenue homes</h2>
       </div>
       <div className='col'>
-        
       </div>
-
     </div>
     <br></br>
-    
     <div className="app">
     <div className="add-post-container">
       <br />
       <form onSubmit={handleSubmit}>
+
         <div className="add-post-container form-floating mb-3">
           <input type="text" required className="form-control" placeholder="House name" value={name}
             onChange={(e) => setName(e.target.value)}
@@ -625,6 +606,7 @@ const Projects = () => {
           />
           <label htmlFor="floatingInput">Rent</label>
         </div>
+        
         <Button className='btn-success btn-background-slide' type="submit">Add House</Button>
       </form>
     </div>
@@ -634,18 +616,13 @@ const Projects = () => {
 
                 <Card className="post-card" key={house.id}>
                     <Card.Header>
-                    
                           <div className='image-card-bg'  style={{ 
-                            
                             backgroundImage: `url(${HouseInteriors[i++]})`,
                             backgroundPosition: 'center',
                             backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat' 
-                            
                             }}>
                           </div>
-
-                    
                     </Card.Header>
                     <br></br>
                     <Card.Body className="post-body">
@@ -678,88 +655,82 @@ const Projects = () => {
                       </div>  
                     </div>
                     </Card.Body>
-                    
                     <br></br> 
-
                     <Card.Footer>
                       <div>
-                      
-
                       <Accordion>
-                      <Accordion.Item eventKey="0">
+                        <Accordion.Item eventKey="0">
                         <Accordion.Header>Edit details</Accordion.Header>
-                        <Accordion.Body>
-                        <br></br>
-                      <h5>Update Features</h5>
-                      <br></br>
-                      
-                        <input id="update-name" value={newname} type="text" required className="form-control" placeholder="Update name"
-                        onChange={(e) => updateName(e.target.value)}
-                        />
-                      
-                      <br></br> 
-                      <Button className='btn-dark btn-sm btn-background-slide' onClick={() => updateHouseStats(house.id)}>Change</Button>
-                      <br></br> 
+                         <Accordion.Body>
+                            <br></br>
+                            <h5>Update Features</h5>
+                            <br></br>
+                            
+                              <input id="update-name" value={newname} type="text" required className="form-control" placeholder="Update name"
+                              onChange={(e) => updateName(e.target.value)}
+                              />
+                            
+                            <br></br> 
+                            <Button className='btn-dark btn-sm btn-background-slide' onClick={() => updateHouseStats(house.id)}>Change</Button>
+                            <br></br> 
 
-                      {/* BEDROOMS UPDATING */}
-                      <br></br>
-                      <input id="update-bedrooms" value={newbedrooms} type="text" required className="form-control" placeholder="Update bedrooms"
-                      onChange={(e) => updateBedrooms(e.target.value)}
-                      />
-                      <br></br> 
-                      <Button className='btn-dark btn-sm btn-background-slide' onClick={() => updateBedroomStats(house.id)}>Change</Button>
-                      <br></br> 
-
-
-                      {/* BATHROOMS UPDATING */}
-                      <br></br>
-                      <input id="update-bathrooms" value={newbathrooms} type="text" required className="form-control" placeholder="Update Bathrooms"
-                      onChange={(e) => updateBathrooms(e.target.value)}
-                      />
-                      <br></br> 
-                      <Button className='btn-dark btn-sm btn-background-slide' onClick={() => updateBathroomStats(house.id)}>Change</Button>
-                      <br></br>
+                            {/* BEDROOMS UPDATING */}
+                            <br></br>
+                            <input id="update-bedrooms" value={newbedrooms} type="text" required className="form-control" placeholder="Update bedrooms"
+                            onChange={(e) => updateBedrooms(e.target.value)}
+                            />
+                            <br></br> 
+                            <Button className='btn-dark btn-sm btn-background-slide' onClick={() => updateBedroomStats(house.id)}>Change</Button>
+                            <br></br> 
 
 
-                      {/* SQUAREFOOTAGE UPDATING */}
-                      <br></br>
-                      <input id="update-squarefootage" value={newsquarefootage} type="text" required className="form-control" placeholder="Update square footage"
-                      onChange={(e) => updateSquareFootage(e.target.value)}
-                      />
-                      <br></br> 
-                      <Button className='btn-dark btn-sm btn-background-slide' onClick={() => updateSquareFootageStats(house.id)}>Change</Button>
-                      <br></br>
-
-                      {/* PRICE UPDATING */}
-                      <br></br>
-                      <input id="update-price" value={newprice} type="text" required className="form-control" placeholder="Update price"
-                      onChange={(e) => updatePrice(e.target.value)}
-                      />
-                      <br></br> 
-                      <Button className='btn-dark btn-sm btn-background-slide' onClick={() => updatePriceStats(house.id)}>Change</Button>
-                      <br></br>
+                            {/* BATHROOMS UPDATING */}
+                            <br></br>
+                            <input id="update-bathrooms" value={newbathrooms} type="text" required className="form-control" placeholder="Update Bathrooms"
+                            onChange={(e) => updateBathrooms(e.target.value)}
+                            />
+                            <br></br> 
+                            <Button className='btn-dark btn-sm btn-background-slide' onClick={() => updateBathroomStats(house.id)}>Change</Button>
+                            <br></br>
 
 
-                      {/* DELETE HOUSE */}
-                      <br></br>
-                      <br></br>
-                      <h5>Delete House</h5>
-                    
-                      <Button className='btn-dark btn-sm post-btn btn-background-slide delete-btn' type='button' onClick={() => deleteHouse(house.id)}>
+                            {/* SQUAREFOOTAGE UPDATING */}
+                            <br></br>
+                            <input id="update-squarefootage" value={newsquarefootage} type="text" required className="form-control" placeholder="Update square footage"
+                            onChange={(e) => updateSquareFootage(e.target.value)}
+                            />
+                            <br></br> 
+                            <Button className='btn-dark btn-sm btn-background-slide' onClick={() => updateSquareFootageStats(house.id)}>Change</Button>
+                            <br></br>
+
+                            {/* PRICE UPDATING */}
+                            <br></br>
+                            <input id="update-price" value={newprice} type="text" required className="form-control" placeholder="Update price"
+                            onChange={(e) => updatePrice(e.target.value)}
+                            />
+                            <br></br> 
+                            <Button className='btn-dark btn-sm btn-background-slide' onClick={() => updatePriceStats(house.id)}>Change</Button>
+                            <br></br>
+
+
+                            {/* DELETE HOUSE */}
+                            <br></br>
+                            <br></br>
+                            <h5>Delete House</h5>
+                          
+                            <Button className='btn-dark btn-sm post-btn btn-background-slide delete-btn' type='button' onClick={() => deleteHouse(house.id)}>
+                              
+                            Delete house
                         
-                       Delete house
-                   
-                      </Button> 
-                      <br></br>
-                      <br></br>
-                        </Accordion.Body>
+                            </Button> 
+                            <br></br>
+                            <br></br>
+                          </Accordion.Body>
                         </Accordion.Item>
                       </Accordion>
                     </div>
                     </Card.Footer>
                 </Card>
-
-                
               );
           })}
         </div>
@@ -767,7 +738,7 @@ const Projects = () => {
     </Container>
     <Footer />
     </>
-    );
+  );
 };
 
 const Contact = () => {
