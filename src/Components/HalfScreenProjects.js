@@ -10,9 +10,9 @@ const HalfScreenProjects = () => {
             <div className="col-sm text-col">
                 <div className="text-col-content-projects">
                     <h2>Projects</h2>
-                    <p>Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet magna.</p>
+                    <p>We believe in targeted and systematic development. Each lot is part of a collective ecosystem that deserves careful consideration.</p>
                     <br></br>
-                    <a href="/projects" className="btn btn-primary btn-background-slide">Call to action</a>
+                    <a href="/projects" className="btn btn-primary btn-background-slide">View our homes</a>
                 </div>
             </div>
             <div className="col-md image-col-projects"></div>

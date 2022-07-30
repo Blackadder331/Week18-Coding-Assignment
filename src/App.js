@@ -17,6 +17,7 @@ import HeroProjects from './Components/HeroProjects';
 import NWAGraph from './Components/NWAGraph';
 import ADU from './Components/ADU';
 import Leadership from './Components/Leadership';
+import StatsProject from './Components/StatsProjects';
 import {Accordion} from 'react-bootstrap';
 import definition from './Assets/definition.png';
 import house1 from './Assets/house-1.png';
@@ -39,6 +40,7 @@ import interior6 from './Assets/interior-6.jpg';
 import interior7 from './Assets/interior-7.jpg';
 import interior8 from './Assets/interior-8.jpg';
 import interior9 from './Assets/interior-9.jpg';
+
 
 
 const App = () => {
@@ -176,9 +178,11 @@ const Home = () => {
             <div className="col-sm philosophy-text">
               <h2>Our philosophy</h2>
               <br></br>
-              <p><strong>Amet, consectetuer adipiscing Lorem eorem ipsum dolor sit amet, laoreet dolore magna aliquam volutpat.</strong> Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim nostrud exerci tation ullamcorper suscipit  nisl ut aliquip ex ea commodo consequat. </p>
+              <h3>Buildings that solve human problems can last the test of time and retain the most long-term value.</h3>
               <br></br>
-              <p>Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim nostrud exerci tation ullamcorper suscipit  nisl ut aliquip ex ea commodo consequat. </p>
+              <p><strong>Design and architectural process are paramount in our work. </strong> We will always choose a methodical and well-researched project over a quick build. The key to good business is starting with a good product. </p>
+              <br></br>
+              <p>Our problem-solving approach is three-pronged: creating accessible high-quality housing downtown, preserving and embracing our natural landscapes and neighborhoods in our designs, and targeting urban development infill over urban sprawl. </p>
             </div>
             <div className="col-sm definition flex">
               <img draggable='false' border="0" alt="" src={definition}/>
@@ -192,32 +196,35 @@ const Home = () => {
         <div className='col-lg-6 why-nwa-col'>
           <h2>Why Northwest Arkansas?</h2>
           <br></br>
-          <p>body copy here. NWA is the fastest growing blah blah blah per capita! Income vs real estate property values grow year after year blah blah blah...</p>
+          <p>Northwest Arkansas is ripe with beautiful greenspaces, historic neighborhoods, and a thriving local economy propelled by small businesses, tech startups, and corporate home offices. </p>
           <br></br>
           <ul>
             <li>
-              List item
+            High population growth (2x the national average)
             </li>
             <li>
-              List item
+            Rank in Top 10 Cities by U.S. World Report (6 years in a row)
             </li>
             <li>
-              List item
+            Corporate home offices of Walmart, Tyson, and J.B. Hunt and other Fortune 500 companies
             </li>
             <li>
-              List item
+            Average home value increase of 175% over 5 years (Zillow Average Home Value Index)
             </li>
             <li>
-              List item
+            Beautiful greenspaces, national parks, and bike trail systems
             </li>
             <li>
-              List item
+            Established, walkable neighborhoods and downtown districts
             </li>
             <li>
-              List item
+            Local small business shopping, entertainment, shopping and farmers' markets  
             </li>
             <li>
-              List item
+            University of Arkansas campus
+            </li>
+            <li>
+            Crystal Bridges and The Momentary Museums
             </li>
           </ul>
         </div>
@@ -257,11 +264,15 @@ const About = () => {
           <div className='container vision-container'>
             <div className='row'>
               <div className='col-lg-6 vision-text-col'>
-                <h2>Company vision</h2>
+                <h2>Vision</h2>
                 <br></br>
-                <h3>Lorem ipsum dolor sit amet, cons ectetuer adipis cing elit, sed diam nonummy nibh euis mod wer.</h3>
+                <h3>Orden INV is a real estate investment company located in Fayetteville, Arkansas.</h3>
                 <br></br>
-                <p>Amet, consectetuer adipiscing Lorem eorem ipsum dolor sit amet, laoreet dolore magna aliquam volutpat. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim nostrud exerci tation ullamcorper suscipit  nisl ut aliquip ex ea commodo consequat.Lit nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Amet, consectetuerlor sit amet, laoreet dolore magna aliquam volutpat.</p>
+                <p>Our focus is on providing high-quality residential rental properties on scattered site locations in established neighborhoods. Orden INV focuses on a single project at a time to assure that construction is being executed properly and that overall project schedules are met. The company has a bias towards assembling a portfolio of properties and holding for the long term. All decisions regarding construction methods, interior finishes, and site selection reflect this focus on the long-term viability of their assets.
+                <br></br>
+                <br></br>Much attention is paid to the elements of residential design that make a meaningful difference in the comfort, security, and enjoyment of the tenants. Interiors are fresh and clean with excellent interior air quality and durable materials. All units feature high ceilings and large windows that capture views and provide abundant natural light. Building exteriors are timeless, durable, and well-proportioned.
+                <br></br>
+                <br></br>Orden INV provides in-house management that is responsive to tenant needs. The company is strong in design and placement of its sales message and can penetrate the static of the leasing market.</p>
               </div>
               <div className='col-lg-6'>
                 <ADU />
@@ -560,14 +571,24 @@ const Projects = () => {
     </div>
     <Container style={{ paddingTop: '100px'  }} className="project-container ">
     <div className='row project-intro'>
-      <div className='col'>
       <h2>Blair Avenue homes</h2>
-      </div>
-      <div className='col'>
-      </div>
+        <div className='col-lg-6'>
+          <br></br>
+          <p>Our Blair Avenue project is located on the south face of Mt. Sequoyah. This provides stunning views looking to the south, great privacy (no dwelling units above or below and no common areas), and Mature trees on all sides of the property.
+          <br></br><br></br>
+          This project features Modern Farmhouse exteriors with lapped siding, board and batten, and metal roofing. The design utilizes clean, bright interiors inspired by Scandinavian minimalism. Each home features square stock interior baseboards and casing, shaker panel wainscoting in bathrooms, and contemporary styled LED light fixtures. Pine floors are used in living and bedroom areas, pine treads on stairs, and porcelain tile in bathrooms.
+          <br></br><br></br>
+          The property is close in proximity to the downtown Fayetteville Square, Walker Park, Razorback Greenway bike trail system, University of Arkansas, Fayetteville High School, and the Arts and Entertainment District.</p>
+          </div>
+        <div className='col-lg-6 blair-map-col'>
+          <img className='blair-map'></img>
+        </div>
     </div>
+
+
     <br></br>
     <div className="app">
+    <h5>Create a new lisitng</h5>
     <div className="add-post-container">
       <br />
       <form onSubmit={handleSubmit}>
@@ -735,6 +756,7 @@ const Projects = () => {
           })}
         </div>
     </div>
+    {/* <StatsProject /> */}
     </Container>
     <Footer />
     </>

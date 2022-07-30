@@ -12,10 +12,10 @@ const HalfScreenLeadership = () => {
             <div className="col-sm text-col">
                 <div className="text-col-content-leadership">
                     <h2>Leadership and vision</h2>
-                    <p>Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet magna.</p>
+                    <p>Every community needs both nature and nurture. We are uniquely positioned to grow our region without losing our core identity.</p>
                     <br></br>
                     <a href="/about" className="btn btn-primary btn-background-slide">
-                        Call to action</a>
+                        Read our story</a>
                 </div>
             </div>
             
