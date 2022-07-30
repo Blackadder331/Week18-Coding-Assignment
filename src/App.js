@@ -61,13 +61,13 @@ const App = () => {
         justifyContent: 'center',
         color: '#fff',
         textAlign: 'center',
-        paddingBottom: '124px'
-        }}><h1 style={{paddingTop: '200px'}}>
+        paddingBottom: '124px',
+        }}><h1 className="animate__animated animate__fadeInUp" style={{paddingTop: '200px'}}>
           There's nothing here: <br></br> 404!
         </h1>
         <div>
           <br></br>
-        <a href="/" className="btn btn-primary btn-background-slide animate__animated animate__fadeInUp" style={{marginTop: '60px'}}>Go back home</a>
+        <a href="/" className="btn btn-primary btn-background-slide animate__animated animate__fadeInUp animate__delay-2s" style={{marginTop: '60px'}}>Go back home</a>
         </div>
         </Container>
         } /> 

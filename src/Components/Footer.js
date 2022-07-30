@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import ODRENlogoreversed from '../Assets/ODREN-logo-reversed.svg'
+import ORDENlogoreversed from '../Assets/ORDEN_logo_reversed.svg'
 import footerarrow from '../Assets/footer-arrow.svg'
 
 
@@ -25,7 +25,7 @@ const Footer = () => {
                         >
                         {/* <a href=" "> */}
                             <img
-                                src={ODRENlogoreversed}
+                                src={ORDENlogoreversed}
                                 className="logo"
                                 style={{ height: 60 }}
                                 alt="ORDEN INV Logo"
