@@ -1,4 +1,6 @@
 import React from "react";
+import Rob from '../Assets/Robert.jpg'
+import Reynolds from '../Assets/Reynolds.png'
 
 const Leadership = () => {
     return(
@@ -15,7 +17,8 @@ const Leadership = () => {
             <br></br>
             <div className="row">
                 <div className="col-md-6">
-                    <h3>Rob Sharp</h3>
+                    <img src={Rob} style={{maxWidth: '270px', paddingBottom: '40px'}}/>
+                    <h3>Robert Sharp</h3>
                     <h4>Owner + Architect</h4>
                     <br></br>
                     <p>
@@ -51,6 +54,7 @@ const Leadership = () => {
                 </div>
 
                 <div className="col-md-6">
+                    <img src={Reynolds} style={{maxWidth: '270px', paddingBottom: '40px'}}/>
                     <h3>Reynolds Sharp</h3>
                     <h4>Owner + Designer</h4>
                     <br></br>

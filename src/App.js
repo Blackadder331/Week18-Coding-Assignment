@@ -176,7 +176,7 @@ const Home = () => {
         <div className="container philosophy">
           <div className="row align-items-start">
             <div className="col-sm philosophy-text">
-              <h2>Our philosophy</h2>
+              <h2>Philosophy</h2>
               <br></br>
               <h3>Buildings that solve human problems can last the test of time and retain the most long-term value.</h3>
               <br></br>
