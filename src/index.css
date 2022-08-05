@@ -864,6 +864,9 @@ footer .align-items-center{
     padding-right: 12vw !important;
     padding-left: 200px;
   }
+  .graph-col {
+    padding-top: 140px;
+  }
 
 }
 
@@ -1458,6 +1461,10 @@ footer .align-items-center{
   
   .image-card-bg {
     min-height: 250px;
+  }
+
+  .why-nwa-col {
+    padding-right: 30px;
   }
 
 } 

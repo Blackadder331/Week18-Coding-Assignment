@@ -13,8 +13,6 @@ const Leadership = () => {
                 </div>
             </div>
             <br></br>
-            <br></br>
-            <br></br>
             <div className="row">
                 <div className="col-md-6">
                     <img src={Rob} style={{maxWidth: '270px', paddingBottom: '40px'}}/>

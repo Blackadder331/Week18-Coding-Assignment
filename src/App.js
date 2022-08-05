@@ -588,7 +588,7 @@ const Projects = () => {
 
     <br></br>
     <div className="app">
-    <h5>Create a new lisitng</h5>
+    <h5>Create a new listing</h5>
     <div className="add-post-container">
       <br />
       <form onSubmit={handleSubmit}>
